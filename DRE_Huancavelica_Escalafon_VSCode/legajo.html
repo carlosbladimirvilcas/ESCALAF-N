@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+
+<html lang="es"><head><style id="critical-icon-guard">html:not(.app-ready) body{visibility:hidden!important}.material-symbols-outlined{visibility:hidden!important}.app-icons-ready .material-symbols-outlined{visibility:visible!important}</style><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={"darkMode":"class","theme":{"extend":{"colors":{"on-secondary-fixed-variant":"#8e1029","on-primary-fixed":"#001c3a","surface":"#f8f9ff","primary":"#00152f","on-surface-variant":"#43474e","secondary-container":"#fd6673","on-background":"#0b1c30","surface-container":"#e5eeff","on-error-container":"#93000a","error":"#ba1a1a","surface-bright":"#f8f9ff","surface-container-lowest":"#ffffff","tertiary-container":"#00301e","primary-fixed":"#d4e3ff","inverse-on-surface":"#eaf1ff","secondary-fixed-dim":"#ffb3b5","on-secondary-container":"#680018","secondary-fixed":"#ffdada","on-secondary":"#ffffff","surface-dim":"#cbdbf5","surface-variant":"#d3e4fe","outline":"#74777f","on-error":"#ffffff","on-primary-container":"#7a92b7","secondary":"#af2c3e","tertiary-fixed":"#6ffbbe","primary-container":"#0f2a4a","on-tertiary-fixed":"#002113","tertiary-fixed-dim":"#4edea3","outline-variant":"#c4c6cf","error-container":"#ffdad6","on-surface":"#0b1c30","primary-fixed-dim":"#b0c8f0","surface-container-highest":"#d3e4fe","on-primary":"#ffffff","inverse-primary":"#b0c8f0","inverse-surface":"#213145","on-tertiary-container":"#00a472","on-tertiary":"#ffffff","on-primary-fixed-variant":"#304869","surface-container-low":"#eff4ff","tertiary":"#00190e","on-tertiary-fixed-variant":"#005236","background":"#f8f9ff","on-secondary-fixed":"#40000b","surface-container-high":"#dce9ff","surface-tint":"#485f82"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"space-xl":"2rem","space-lg":"1.5rem","gutter":"1.5rem","space-sm":"0.75rem","space-xs":"0.5rem","space-2xs":"0.25rem","space-md":"1rem","sidebar-width":"17.5rem","space-3xl":"4rem","max-container":"90rem","space-2xl":"3rem"},"fontFamily":{"headline-lg":["Plus Jakarta Sans"],"headline-md":["Plus Jakarta Sans"],"label-sm":["Inter"],"headline-sm":["Plus Jakarta Sans"],"label-md":["Inter"],"display":["Plus Jakarta Sans"],"body-lg":["Inter"],"body-sm":["Inter"],"code":["Inter"],"headline-lg-mobile":["Plus Jakarta Sans"],"body-md":["Inter"]},"fontSize":{"headline-lg":["1.75rem",{"lineHeight":"2.25rem","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-md":["1.25rem",{"lineHeight":"1.75rem","letterSpacing":"-0.015em","fontWeight":"600"}],"label-sm":["0.75rem",{"lineHeight":"1rem","letterSpacing":"0.04em","fontWeight":"600"}],"headline-sm":["1.125rem",{"lineHeight":"1.5rem","fontWeight":"600"}],"label-md":["0.875rem",{"lineHeight":"1.25rem","letterSpacing":"0.01em","fontWeight":"600"}],"display":["2.25rem",{"lineHeight":"2.75rem","letterSpacing":"-0.025em","fontWeight":"700"}],"body-lg":["1rem",{"lineHeight":"1.625rem","fontWeight":"400"}],"body-sm":["0.75rem",{"lineHeight":"1.125rem","fontWeight":"400"}],"code":["0.8125rem",{"lineHeight":"1rem","fontWeight":"500"}],"headline-lg-mobile":["1.375rem",{"lineHeight":"1.875rem","letterSpacing":"-0.015em","fontWeight":"700"}],"body-md":["0.875rem",{"lineHeight":"1.375rem","fontWeight":"400"}]}}}};</script><style id="vscode-nav-style">
+#vscode-nav{position:fixed;right:18px;bottom:18px;z-index:99999;background:#0f2a4a;color:#fff;border-radius:14px;box-shadow:0 10px 30px rgba(0,0,0,.25);font-family:Inter,Arial,sans-serif;overflow:hidden}#vscode-nav summary{cursor:pointer;padding:10px 14px;font-weight:700;list-style:none}#vscode-nav .links{display:flex;flex-direction:column;padding:0 8px 8px;gap:5px}#vscode-nav a{color:#fff;text-decoration:none;padding:8px 10px;border-radius:8px;font-size:13px;background:rgba(255,255,255,.08)}#vscode-nav a:hover{background:rgba(255,255,255,.18)}
+</style><link rel="stylesheet" href="app.css"></head><body class="bg-background font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-sidebar-width bg-surface-container-lowest z-50 flex flex-col shadow-[0_1px_8px_rgba(15,42,74,0.06)] overflow-y-auto"><div class="h-16 px-space-md flex items-center gap-space-sm bg-primary-container shrink-0"><img alt="Logo DRE Huancavelica Escalafón" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1XrEUogerzl4xaLiW4wdVJrrH8pMOYNUAGn7Cap-LeureQxJVxPKnYzuOtIuksQznfdBtYYh2wXlddk3Uo6TVi-XyxlCjWrx0PpdcQKNvgL3VA85vj6S19B6g8RARK8YT573dx7LbOHYfhkr7Z026dYvqHYhz6_BCSlSzTkm6ObhUQMnjrAMf7BKp6hxG-X0jvwFaN7IrTgJEXS2I5nsYgU538o9uddcgIfL_EdERPbw34DCDC5raMYCqY"/><div class="flex flex-col min-w-0"><span class="font-headline-sm text-headline-sm text-on-primary truncate tracking-tight">DRE Huancavelica</span><span class="font-label-sm text-label-sm text-on-primary-container tracking-wider uppercase truncate">Gestión de Escalafón</span></div></div><nav class="flex-1 px-space-xs py-space-sm space-y-space-md" data-active-classes="bg-primary-container text-on-primary"><div class="space-y-space-2xs"><span class="px-space-sm font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider block">Inicio</span><a class="flex items-center gap-space-xs px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="resumen-general" href="dashboard.html"><span class="material-symbols-outlined text-lg">dashboard</span><span class="font-label-md text-label-md truncate">Resumen General</span></a></div><div class="space-y-space-2xs"><span class="px-space-sm font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider block">Gestión Docente y Adm.</span><a class="flex items-center gap-space-xs px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="servidores-publicos" href="servidores.html"><span class="material-symbols-outlined text-lg">badge</span><span class="font-label-md text-label-md truncate">Servidores Públicos</span></a><a class="flex items-center gap-space-xs px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="ficha-de-escalafon" href="ficha.html"><span class="material-symbols-outlined text-lg">assignment_ind</span><span class="font-label-md text-label-md truncate">Ficha de Escalafón</span></a><a class="flex items-center gap-space-xs px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="legajo-digital" href="legajo.html"><span class="material-symbols-outlined text-lg">folder_shared</span><span class="font-label-md text-label-md truncate">Legajo Digital</span></a></div><div class="space-y-space-2xs"><span class="px-space-sm font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider block">Trámites y Requerimientos</span><a aria-current="page" class="flex items-center gap-space-xs px-space-sm py-2 rounded-lg transition-colors bg-primary-container text-on-primary" data-path="requerimientos" href="requerimientos.html"><span class="material-symbols-outlined text-lg">send_to_mobile</span><span class="font-label-md text-label-md truncate">Requerimientos</span></a><a class="flex items-center gap-space-xs px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="bandeja-de-solicitudes" href="bandeja-solicitudes.html"><span class="material-symbols-outlined text-lg">inbox</span><span class="font-label-md text-label-md truncate">Bandeja de Solicitudes</span></a><a class="flex items-center gap-space-xs px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="traslado-de-legajos" href="traslado.html"><span class="material-symbols-outlined text-lg">sync_alt</span><span class="font-label-md text-label-md truncate">Traslado de Legajos</span></a></div><div class="space-y-space-2xs"><span class="px-space-sm font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider block">Desarrollo y Acciones</span><a class="flex items-center gap-space-xs px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="acciones-formativas" href="acciones-formativas.html"><span class="material-symbols-outlined text-lg">school</span><span class="font-label-md text-label-md truncate">Acciones Formativas</span></a><a class="flex items-center gap-space-xs px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="resoluciones-y-licencias" href="resoluciones-licencias.html"><span class="material-symbols-outlined text-lg">gavel</span><span class="font-label-md text-label-md truncate">Resoluciones y Licencias</span></a><a class="flex items-center gap-space-xs px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="reportes-y-exportacion" href="reportes-exportacion.html"><span class="material-symbols-outlined text-lg">description</span><span class="font-label-md text-label-md truncate">Reportes y Exportación</span></a></div><div class="space-y-space-2xs"><span class="px-space-sm font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider block">Seguridad y Sistema</span><a class="flex items-center gap-space-xs px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="control-de-usuarios" href="control-usuarios.html"><span class="material-symbols-outlined text-lg">admin_panel_settings</span><span class="font-label-md text-label-md truncate">Control de Usuarios</span></a><a class="flex items-center gap-space-xs px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="auditoria-y-trazabilidad" href="auditoria-trazabilidad.html"><span class="material-symbols-outlined text-lg">history_edu</span><span class="font-label-md text-label-md truncate">Auditoría y Trazabilidad</span></a><a class="flex items-center gap-space-xs px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="configuracion-institucional" href="configuracion-institucional.html"><span class="material-symbols-outlined text-lg">settings</span><span class="font-label-md text-label-md truncate">Configuración Institucional</span></a></div></nav><div class="p-space-sm bg-surface-container-low mt-auto shrink-0"><div class="flex items-center justify-between mb-1"><span class="font-label-sm text-label-sm text-on-surface-variant">Versión 2.4.0</span><span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded bg-surface-container text-on-surface">PROD</span></div><a class="font-body-sm text-body-sm text-secondary hover:underline flex items-center gap-1" href="#"><span class="material-symbols-outlined text-xs">help</span>Mesa de Ayuda DRE</a></div></aside><div class="pl-sidebar-width min-h-screen flex flex-col"><header class="fixed top-0 left-sidebar-width right-0 h-16 bg-surface-container-lowest z-40 px-gutter flex items-center justify-between shadow-[0_1px_8px_rgba(15,42,74,0.04)]"><div class="flex items-center gap-space-md flex-1 max-w-2xl"><button class="p-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface focus:outline-none" type="button"><span class="material-symbols-outlined text-xl">menu</span></button><nav class="hidden md:flex items-center gap-2 font-label-md text-label-md text-on-surface-variant"><span class="text-on-surface-variant">Sede Central</span><span class="material-symbols-outlined text-xs">chevron_right</span><span class="text-on-surface">Escalafón Regional</span></nav><div class="relative flex-1"><span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-lg">search</span><input class="w-full h-10 pl-9 pr-4 rounded-lg bg-surface font-body-sm text-body-sm text-on-surface placeholder:text-outline focus:outline-none focus:bg-surface-container-lowest shadow-sm" placeholder="Buscar por DNI, nombres, código modular..." type="text"/></div></div><div class="flex items-center gap-space-md"><div class="hidden sm:flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-high text-primary"><span class="material-symbols-outlined text-sm">account_balance</span><span class="font-label-sm text-label-sm uppercase tracking-wider font-semibold">DRE Huancavelica</span></div><button class="relative p-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface focus:outline-none" type="button"><span class="material-symbols-outlined text-xl">notifications</span><span class="absolute top-1.5 right-1.5 w-4 h-4 bg-secondary text-on-secondary rounded-full font-label-sm text-label-sm flex items-center justify-center text-[10px] leading-none">3</span></button><div class="flex items-center gap-space-xs pl-space-xs"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDewevi67Mw6PxfpLBat9ZbwmAw3iRiDKUx3t13_hQHzvKX9LoyzsNF1JRr-hfwMsfXSwOgIxq2hJShcjTZvpAcZdI2pWaw5DZMuBiyKkSGgMBmA_xFw33SToN5bIMQDX5IMPMN_O_vjwuJ0ptzmvCeScGpr0S8RKX1ASSx0edwznaC85t28gqpAFYWxD1p5530h78lRs8DKFkVot-WvI37Pm8kX6TUjGa-hFXCLYMoXqNBlYxHMOD4"/><div class="hidden lg:flex flex-col text-left"><span class="font-label-md text-label-md text-on-surface truncate leading-tight">Lic. Juan Carlos Ramos</span><span class="font-label-sm text-label-sm text-on-surface-variant leading-none">Administrador de Escalafón</span></div><a class="p-1.5 text-on-surface-variant hover:text-secondary hover:bg-surface-container rounded-lg transition-colors ml-1" data-path="login" href="index.html" title="Cerrar Sesión"><span class="material-symbols-outlined text-lg">logout</span></a></div></div></header><main class="w-full pt-16 bg-surface flex-1 px-gutter py-space-lg max-w-max-container mx-auto"><div class="flex flex-col w-full space-y-space-md">
+<!-- Top Navigation & Context Bar -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-sm bg-surface-container-lowest p-space-md rounded-xl shadow-sm">
+<div class="flex flex-col gap-1 min-w-0">
+<div class="flex items-center gap-2 font-label-sm text-label-sm text-on-surface-variant flex-wrap">
+<span>Inicio</span>
+<span class="material-symbols-outlined text-xs text-outline">chevron_right</span>
+<span>Servidores Públicos</span>
+<span class="material-symbols-outlined text-xs text-outline">chevron_right</span>
+<span class="text-on-surface">Ficha de Escalafón</span>
+<span class="material-symbols-outlined text-xs text-outline">chevron_right</span>
+<span class="px-2 py-0.5 rounded-full bg-primary-container text-on-primary font-semibold">Legajo Digital</span>
+</div>
+<div class="flex items-baseline gap-3 flex-wrap pt-1">
+<h1 class="font-headline-lg text-headline-lg text-primary tracking-tight">Legajo Digital Personal</h1>
+<span class="px-2.5 py-0.5 rounded-md bg-surface-container-high text-primary font-code text-code font-bold tracking-wide">EXP: LEG-2024-004281</span>
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-tertiary-container text-tertiary-fixed font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary-fixed animate-pulse"></span>
+          142 Folios Certificados PAdES
+        </span>
+</div>
+</div>
+<!-- Quick Action Toolbar --> 
+<div class="flex items-center gap-space-xs flex-wrap">
+<button class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-primary-container text-on-primary font-label-md text-label-md shadow-sm hover:opacity-95 transition-all" onclick="document.getElementById('modal-upload-doc').classList.remove('hidden')" type="button">
+<span class="material-symbols-outlined text-base">cloud_upload</span>
+<span>+ Cargar Documento</span>
+</button>
+<button class="inline-flex items-center gap-1.5 px-3 py-2 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md hover:bg-surface-container-high transition-colors" type="button">
+<span class="material-symbols-outlined text-base text-primary">download_for_offline</span>
+<span class="hidden sm:inline">Descargar Legajo PDF</span>
+</button>
+<button class="inline-flex items-center gap-1.5 px-3 py-2 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md hover:bg-surface-container-high transition-colors" type="button">
+<span class="material-symbols-outlined text-base text-secondary">verified</span>
+<span class="hidden sm:inline">Foliar &amp; Certificar</span>
+</button>
+<button class="inline-flex items-center gap-1.5 px-3 py-2 rounded-lg bg-surface-container text-secondary font-label-md text-label-md hover:bg-secondary-fixed transition-colors" onclick="document.getElementById('modal-observation').classList.remove('hidden')" type="button">
+<span class="material-symbols-outlined text-base">outgoing_mail</span>
+<span class="hidden sm:inline">Requerimiento</span>
+</button>
+</div>
+</div>
+<!-- Servidor Informative Banner Card -->
+<div class="relative overflow-hidden bg-primary-container text-on-primary rounded-xl p-space-md shadow-sm">
+<div class="absolute right-0 top-0 bottom-0 w-96 opacity-10 pointer-events-none flex items-center justify-end pr-6">
+<svg class="w-72 h-72 fill-current" viewbox="0 0 24 24">
+<path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"></path>
+</svg>
+</div>
+<div class="relative z-10 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md">
+<img class="w-16 h-16 rounded-lg object-cover shadow-sm bg-surface-container" data-alt="Fotografía institucional formal tamaño pasaporte de servidor público profesor peruano con terno oscuro fondo blanco nítido y sobrio" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBI09v_cVTg2Idosh78tV1NJcJeWk_UPYYaRTIF1DOu7KUcYBH76xqHSSbt-610kRmdexqlLkYyDJ-xyCs1CseR3guFl8McbVLXWi502d3Ds3Fon3WSACeHXhtzc5yfuhEAOZ-7r2nHhFhxohWbZetGQbSMDgIdsdPWBO_jgnda-s1CIVzdIPd8HCDH5xrES1hqnakwfrA1PxnXzc0Fow1mBnwZygai9i_8pkhjVg3EBMdaE6p0PNe6"/>
+<div class="space-y-1 min-w-0">
+<div class="flex items-center gap-2 flex-wrap">
+<span class="font-headline-sm text-headline-sm text-on-primary">Prof. Juan Carlos Ramos Condori</span>
+<span class="px-2 py-0.5 rounded text-[11px] font-semibold bg-tertiary text-tertiary-fixed tracking-wider">DOCENTE ACTIVO</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-primary-container">
+            DNI: <span class="font-semibold text-on-primary">42819034</span> • Cód. Modular: <span class="font-semibold text-on-primary">1045239</span> • UGEL Huancavelica • Ley N° 29944 (Reforma Magisterial - Escala IV)
+          </p>
+<div class="flex items-center gap-3 text-xs text-surface-container-high pt-0.5">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-xs">business</span> I.E. Emblemática La Victoria de Ayacucho</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-xs">history</span> Ingreso: 12/03/2011</span>
+</div>
+</div>
+</div>
+<!-- Completeness gauge -->
+<div class="w-full lg:w-72 bg-surface-container-lowest/10 backdrop-blur-sm p-3 rounded-lg flex flex-col gap-1.5 self-stretch lg:self-auto justify-center">
+<div class="flex items-center justify-between font-label-sm text-label-sm text-on-primary">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">verified_user</span> Madurez Normativa</span>
+<span class="font-bold text-tertiary-fixed">92%</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container-lowest/20 overflow-hidden">
+<div class="h-full bg-tertiary-fixed rounded-full" style="width: 92%;"></div>
+</div>
+<span class="text-[11px] text-on-primary-container flex items-center justify-between">
+<span>Estándar SERVIR / MINEDU</span>
+<span class="text-tertiary-fixed-dim font-medium">Conforme a Ley</span>
+</span>
+</div>
+</div>
+</div>
+<!-- KPI Indicators Bar -->
+<div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-space-sm">
+<div class="p-space-sm rounded-xl bg-surface-container-lowest shadow-sm flex items-center gap-3">
+<div class="w-11 h-11 rounded-lg bg-surface-container flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined">folder_open</span>
+</div>
+<div class="min-w-0">
+<span class="font-body-sm text-body-sm text-on-surface-variant block">Total Documentos</span>
+<span class="font-headline-md text-headline-md text-primary font-bold">28</span>
+</div>
+</div>
+<div class="p-space-sm rounded-xl bg-surface-container-lowest shadow-sm flex items-center gap-3">
+<div class="w-11 h-11 rounded-lg bg-surface-container-low flex items-center justify-center text-on-tertiary-container shrink-0">
+<span class="material-symbols-outlined">task_alt</span>
+</div>
+<div class="min-w-0">
+<span class="font-body-sm text-body-sm text-on-surface-variant block">Validados / Aprobados</span>
+<div class="flex items-center gap-1.5">
+<span class="font-headline-md text-headline-md text-on-tertiary-container font-bold">24</span>
+<span class="text-[11px] font-semibold text-on-tertiary-container">85.7%</span>
+</div>
+</div>
+</div>
+<div class="p-space-sm rounded-xl bg-surface-container-lowest shadow-sm flex items-center gap-3">
+<div class="w-11 h-11 rounded-lg bg-surface-container flex items-center justify-center text-primary-fixed-variant shrink-0">
+<span class="material-symbols-outlined">pending_actions</span>
+</div>
+<div class="min-w-0">
+<span class="font-body-sm text-body-sm text-on-surface-variant block">En Revisión</span>
+<span class="font-headline-md text-headline-md text-primary font-bold">2</span>
+</div>
+</div>
+<div class="p-space-sm rounded-xl bg-surface-container-lowest shadow-sm flex items-center gap-3">
+<div class="w-11 h-11 rounded-lg bg-secondary-fixed flex items-center justify-center text-secondary shrink-0">
+<span class="material-symbols-outlined">error_outline</span>
+</div>
+<div class="min-w-0">
+<span class="font-body-sm text-body-sm text-on-surface-variant block">Docs Observados</span>
+<div class="flex items-center gap-1.5">
+<span class="font-headline-md text-headline-md text-secondary font-bold">2</span>
+<span class="text-[10px] font-bold px-1.5 py-0.5 rounded bg-secondary-fixed text-on-secondary-container">Subsanar</span>
+</div>
+</div>
+</div>
+<div class="p-space-sm rounded-xl bg-surface-container-lowest shadow-sm col-span-2 sm:col-span-1 flex items-center gap-3">
+<div class="w-11 h-11 rounded-lg bg-surface-container flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined">format_list_numbered</span>
+</div>
+<div class="min-w-0">
+<span class="font-body-sm text-body-sm text-on-surface-variant block">Fojas Foliadas</span>
+<span class="font-headline-md text-headline-md text-primary font-bold">142</span>
+</div>
+</div>
+</div>
+<!-- Search and Quick Filter Bar -->
+<div class="flex flex-col md:flex-row items-center justify-between gap-3 bg-surface-container-lowest p-space-sm rounded-xl shadow-sm">
+<div class="relative w-full md:w-96">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-lg">search</span>
+<input class="w-full h-10 pl-9 pr-3 rounded-lg bg-surface font-body-sm text-body-sm text-on-surface placeholder:text-outline focus:outline-none focus:bg-surface-container-lowest shadow-inner" id="doc-search" placeholder="Filtrar por título, R.D., palabra clave..." type="text"/>
+</div>
+<div class="flex items-center gap-2 w-full md:w-auto overflow-x-auto pb-1 md:pb-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant whitespace-nowrap">Estado:</span>
+<button class="px-3 py-1 rounded-full bg-primary-container text-on-primary font-label-sm text-label-sm whitespace-nowrap" type="button">Todos (28)</button>
+<button class="px-3 py-1 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm hover:bg-surface-container-high whitespace-nowrap" type="button">Aprobados (24)</button>
+<button class="px-3 py-1 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm hover:bg-surface-container-high whitespace-nowrap" type="button">En Revisión (2)</button>
+<button class="px-3 py-1 rounded-full bg-secondary-fixed text-on-secondary-container font-label-sm text-label-sm hover:bg-secondary-fixed-dim whitespace-nowrap" type="button">Observados (2)</button>
+</div>
+</div>
+<!-- Main Split Architecture: 10 Normative Sections + Document Data Table + Quick Preview Sidebar -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-space-md items-start">
+<!-- Left Navigation: Official MINEDU/SERVIR 10 Sections -->
+<div class="xl:col-span-3 bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden flex flex-col">
+<div class="p-space-md bg-surface-container border-b-0 flex items-center justify-between">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-primary font-bold block">Estructura Oficial</span>
+<span class="text-xs text-on-surface-variant">10 Secciones Normativas</span>
+</div>
+<span class="material-symbols-outlined text-primary text-xl">account_tree</span>
+</div>
+<nav class="p-space-xs space-y-1 max-h-[640px] overflow-y-auto" id="sections-nav">
+<!-- Section I -->
+<a class="flex items-center justify-between p-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container transition-colors group" href="javascript:void(0)">
+<div class="flex items-center gap-2.5 min-w-0">
+<span class="font-code text-xs font-bold px-1.5 py-0.5 rounded bg-surface-container group-hover:bg-surface-container-high text-primary">01</span>
+<div class="min-w-0">
+<span class="font-label-md text-label-md text-on-surface block truncate">Filiación e Identificación</span>
+<span class="text-[11px] text-outline truncate block">DNI, partida de nacimiento</span>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-full text-[11px] font-semibold bg-surface-container text-on-surface shrink-0">3</span>
+</a>
+<!-- Section II -->
+<a class="flex items-center justify-between p-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container transition-colors group" href="javascript:void(0)">
+<div class="flex items-center gap-2.5 min-w-0">
+<span class="font-code text-xs font-bold px-1.5 py-0.5 rounded bg-surface-container group-hover:bg-surface-container-high text-primary">02</span>
+<div class="min-w-0">
+<span class="font-label-md text-label-md text-on-surface block truncate">Situación Laboral / Nombramiento</span>
+<span class="text-[11px] text-outline truncate block">R.D. Nombramiento, contratos</span>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-full text-[11px] font-semibold bg-surface-container text-on-surface shrink-0">5</span>
+</a>
+<!-- Section III - ACTIVE -->
+<a class="flex items-center justify-between p-2.5 rounded-lg bg-primary-container text-on-primary transition-colors shadow-sm" href="javascript:void(0)">
+<div class="flex items-center gap-2.5 min-w-0">
+<span class="font-code text-xs font-bold px-1.5 py-0.5 rounded bg-surface-container-lowest/20 text-on-primary">03</span>
+<div class="min-w-0">
+<span class="font-label-md text-label-md text-on-primary font-bold block truncate">Formación y Grados Académicos</span>
+<span class="text-[11px] text-on-primary-container truncate block">Títulos, maestrías, diplomas</span>
+</div>
+</div>
+<div class="flex items-center gap-1 shrink-0">
+<span class="w-2 h-2 rounded-full bg-secondary-container" title="Tiene documento observado"></span>
+<span class="px-2 py-0.5 rounded-full text-[11px] font-semibold bg-surface-container-lowest text-primary">4 docs</span>
+</div>
+</a>
+<!-- Section IV -->
+<a class="flex items-center justify-between p-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container transition-colors group" href="javascript:void(0)">
+<div class="flex items-center gap-2.5 min-w-0">
+<span class="font-code text-xs font-bold px-1.5 py-0.5 rounded bg-surface-container group-hover:bg-surface-container-high text-primary">04</span>
+<div class="min-w-0">
+<span class="font-label-md text-label-md text-on-surface block truncate">Trayectoria Laboral y Ascensos</span>
+<span class="text-[11px] text-outline truncate block">Ascensos de escala, reasignación</span>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-full text-[11px] font-semibold bg-surface-container text-on-surface shrink-0">6</span>
+</a>
+<!-- Section V -->
+<a class="flex items-center justify-between p-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container transition-colors group" href="javascript:void(0)">
+<div class="flex items-center gap-2.5 min-w-0">
+<span class="font-code text-xs font-bold px-1.5 py-0.5 rounded bg-surface-container group-hover:bg-surface-container-high text-primary">05</span>
+<div class="min-w-0">
+<span class="font-label-md text-label-md text-on-surface block truncate">Licencias, Permisos y Comisiones</span>
+<span class="text-[11px] text-outline truncate block">Enfermedad, capacitación oficial</span>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-full text-[11px] font-semibold bg-surface-container text-on-surface shrink-0">3</span>
+</a>
+<!-- Section VI -->
+<a class="flex items-center justify-between p-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container transition-colors group" href="javascript:void(0)">
+<div class="flex items-center gap-2.5 min-w-0">
+<span class="font-code text-xs font-bold px-1.5 py-0.5 rounded bg-surface-container group-hover:bg-surface-container-high text-primary">06</span>
+<div class="min-w-0">
+<span class="font-label-md text-label-md text-on-surface block truncate">Evaluaciones y Desempeño</span>
+<span class="text-[11px] text-outline truncate block">Evaluación ordinaria MINEDU</span>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-full text-[11px] font-semibold bg-surface-container text-on-surface shrink-0">2</span>
+</a>
+<!-- Section VII -->
+<a class="flex items-center justify-between p-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container transition-colors group" href="javascript:void(0)">
+<div class="flex items-center gap-2.5 min-w-0">
+<span class="font-code text-xs font-bold px-1.5 py-0.5 rounded bg-surface-container group-hover:bg-surface-container-high text-primary">07</span>
+<div class="min-w-0">
+<span class="font-label-md text-label-md text-on-surface block truncate">Méritos y Felicitaciones</span>
+<span class="text-[11px] text-outline truncate block">Resolución de felicitación DREH</span>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-full text-[11px] font-semibold bg-surface-container text-on-surface shrink-0">2</span>
+</a>
+<!-- Section VIII -->
+<a class="flex items-center justify-between p-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container transition-colors group" href="javascript:void(0)">
+<div class="flex items-center gap-2.5 min-w-0">
+<span class="font-code text-xs font-bold px-1.5 py-0.5 rounded bg-surface-container group-hover:bg-surface-container-high text-primary">08</span>
+<div class="min-w-0">
+<span class="font-label-md text-label-md text-on-surface block truncate">Sanciones y Disciplinarios</span>
+<span class="text-[11px] text-outline truncate block">Sin sanciones activas</span>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-full text-[11px] font-semibold bg-surface-container text-outline shrink-0">0</span>
+</a>
+<!-- Section IX -->
+<a class="flex items-center justify-between p-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container transition-colors group" href="javascript:void(0)">
+<div class="flex items-center gap-2.5 min-w-0">
+<span class="font-code text-xs font-bold px-1.5 py-0.5 rounded bg-surface-container group-hover:bg-surface-container-high text-primary">09</span>
+<div class="min-w-0">
+<span class="font-label-md text-label-md text-on-surface block truncate">Retiro, Ceses y Pensiones</span>
+<span class="text-[11px] text-outline truncate block">Afiliación AFP / ONP</span>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-full text-[11px] font-semibold bg-surface-container text-on-surface shrink-0">1</span>
+</a>
+<!-- Section X -->
+<a class="flex items-center justify-between p-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container transition-colors group" href="javascript:void(0)">
+<div class="flex items-center gap-2.5 min-w-0">
+<span class="font-code text-xs font-bold px-1.5 py-0.5 rounded bg-surface-container group-hover:bg-surface-container-high text-primary">10</span>
+<div class="min-w-0">
+<span class="font-label-md text-label-md text-on-surface block truncate">Beneficios y Compensaciones</span>
+<span class="text-[11px] text-outline truncate block">Luto, sepelio, CTS acumulada</span>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-full text-[11px] font-semibold bg-surface-container text-on-surface shrink-0">2</span>
+</a>
+</nav>
+<!-- Section footer note -->
+<div class="p-3 bg-surface-container-low text-xs text-on-surface-variant flex items-center gap-2">
+<span class="material-symbols-outlined text-sm text-primary">info</span>
+<span>Orden según RVM N° 124-2023-MINEDU</span>
+</div>
+</div>
+<!-- Center: Documents Data Repository Table for Selected Section -->
+<div class="xl:col-span-6 bg-surface-container-lowest rounded-xl shadow-sm flex flex-col overflow-hidden">
+<!-- Section Header Info -->
+<div class="p-space-md bg-surface-container flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+<div>
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded bg-primary text-on-primary font-code text-xs font-bold">SECCIÓN 03</span>
+<h2 class="font-headline-md text-headline-md text-primary font-bold">Formación y Grados Académicos</h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">4 documentos registrados • 14 folios acumulados en esta sección</p>
+</div>
+<div class="flex items-center gap-2">
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-primary transition-colors" title="Ordenar por folio" type="button">
+<span class="material-symbols-outlined text-lg">swap_vert</span>
+</button>
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-primary transition-colors" title="Exportar sección en PDF" type="button">
+<span class="material-symbols-outlined text-lg">picture_as_pdf</span>
+</button>
+</div>
+</div>
+<!-- Table Container -->
+<div class="overflow-x-auto">
+<table class="w-full text-left font-body-sm text-body-sm border-collapse">
+<thead>
+<tr class="bg-surface text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">
+<th class="py-3 px-3">Folio</th>
+<th class="py-3 px-3">Documento / Acto Resolutivo</th>
+<th class="py-3 px-3">Tipo</th>
+<th class="py-3 px-3">Emisión</th>
+<th class="py-3 px-3 text-center">Estado</th>
+<th class="py-3 px-3 text-right">Acciones</th>
+</tr>
+</thead>
+<tbody class="divide-y-0 text-on-surface">
+<!-- Row 1: Selected / Featured -->
+<tr class="bg-surface-container-low hover:bg-surface-container transition-colors cursor-pointer group" onclick="selectDocument('doc-1')">
+<td class="py-3 px-3 align-top whitespace-nowrap">
+<span class="font-code text-xs font-bold text-primary px-1.5 py-0.5 rounded bg-surface-container-high">034 - 037</span>
+<span class="block text-[10px] text-outline mt-0.5">4 fojas</span>
+</td>
+<td class="py-3 px-3 align-top">
+<div class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-base mt-0.5 shrink-0">school</span>
+<div>
+<span class="font-label-md text-label-md text-primary font-bold block group-hover:text-secondary transition-colors">Título Profesional de Licenciado en Educación Secundaria</span>
+<span class="text-xs text-on-surface-variant block">Mención: Matemática y Computación - Univ. Nac. de Huancavelica</span>
+<span class="text-[11px] text-outline font-code">Reg. SUNEDU N° 458921-2010</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-3 align-top whitespace-nowrap">
+<span class="px-2 py-0.5 rounded text-[11px] font-semibold bg-surface-container text-on-surface">Título Pedagógico</span>
+</td>
+<td class="py-3 px-3 align-top whitespace-nowrap">
+<span class="block text-xs font-medium">18/12/2010</span>
+<span class="block text-[10px] text-outline">Reg: 14/03/2011</span>
+</td>
+<td class="py-3 px-3 align-top text-center whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[11px] font-semibold bg-surface-container-low text-on-tertiary-container">
+<span class="w-1.5 h-1.5 rounded-full bg-on-tertiary-container"></span>
+                  APROBADO
+                </span>
+</td>
+<td class="py-3 px-3 align-top text-right whitespace-nowrap">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1 rounded hover:bg-surface-container-high text-primary" title="Ver Visor" type="button">
+<span class="material-symbols-outlined text-base">visibility</span>
+</button>
+<button class="p-1 rounded hover:bg-surface-container-high text-on-surface-variant" title="Descargar" type="button">
+<span class="material-symbols-outlined text-base">download</span>
+</button>
+<button class="p-1 rounded hover:bg-surface-container-high text-secondary" title="Trazabilidad" type="button">
+<span class="material-symbols-outlined text-base">history</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 2: Observado -->
+<tr class="hover:bg-surface-container transition-colors cursor-pointer group bg-surface-container-lowest" onclick="selectDocument('doc-2')">
+<td class="py-3 px-3 align-top whitespace-nowrap">
+<span class="font-code text-xs font-bold text-secondary px-1.5 py-0.5 rounded bg-secondary-fixed">038 - 041</span>
+<span class="block text-[10px] text-outline mt-0.5">4 fojas</span>
+</td>
+<td class="py-3 px-3 align-top">
+<div class="flex items-start gap-2">
+<span class="material-symbols-outlined text-secondary text-base mt-0.5 shrink-0">workspace_premium</span>
+<div>
+<span class="font-label-md text-label-md text-on-surface font-bold block group-hover:text-secondary transition-colors">Grado Académico de Maestro en Gestión Educativa</span>
+<span class="text-xs text-on-surface-variant block">Escuela de Posgrado - Univ. Peruana Los Andes</span>
+<span class="inline-flex items-center gap-1 text-[11px] text-secondary font-semibold mt-0.5">
+<span class="material-symbols-outlined text-xs">warning</span> Falta Legalización Notarial y QR no redirige
+                    </span>
+</div>
+</div>
+</td>
+<td class="py-3 px-3 align-top whitespace-nowrap">
+<span class="px-2 py-0.5 rounded text-[11px] font-semibold bg-surface-container text-on-surface">Grado Posgrado</span>
+</td>
+<td class="py-3 px-3 align-top whitespace-nowrap">
+<span class="block text-xs font-medium">15/09/2022</span>
+<span class="block text-[10px] text-outline">Reg: 22/01/2024</span>
+</td>
+<td class="py-3 px-3 align-top text-center whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[11px] font-semibold bg-secondary-fixed text-on-secondary-container">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                  OBSERVADO
+                </span>
+</td>
+<td class="py-3 px-3 align-top text-right whitespace-nowrap">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1 rounded hover:bg-surface-container-high text-primary" title="Ver Visor" type="button">
+<span class="material-symbols-outlined text-base">visibility</span>
+</button>
+<button class="p-1 rounded hover:bg-secondary-fixed text-secondary" onclick="event.stopPropagation(); document.getElementById('modal-observation').classList.remove('hidden')" title="Ver Detalle de Observación" type="button">
+<span class="material-symbols-outlined text-base">edit_note</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 3: Aprobado -->
+<tr class="hover:bg-surface-container transition-colors cursor-pointer group bg-surface-container-lowest" onclick="selectDocument('doc-3')">
+<td class="py-3 px-3 align-top whitespace-nowrap">
+<span class="font-code text-xs font-bold text-primary px-1.5 py-0.5 rounded bg-surface-container-high">042 - 044</span>
+<span class="block text-[10px] text-outline mt-0.5">3 fojas</span>
+</td>
+<td class="py-3 px-3 align-top">
+<div class="flex items-start gap-2">
+<span class="material-symbols-outlined text-on-surface-variant text-base mt-0.5 shrink-0">history_edu</span>
+<div>
+<span class="font-label-md text-label-md text-on-surface font-bold block group-hover:text-secondary transition-colors">Segunda Especialidad en Informática y Tecnología Educativa</span>
+<span class="text-xs text-on-surface-variant block">Facultad de Educación - UNMSM</span>
+<span class="text-[11px] text-outline font-code">Diploma N° 00984-2017</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-3 align-top whitespace-nowrap">
+<span class="px-2 py-0.5 rounded text-[11px] font-semibold bg-surface-container text-on-surface">Especialización</span>
+</td>
+<td class="py-3 px-3 align-top whitespace-nowrap">
+<span class="block text-xs font-medium">10/11/2017</span>
+<span class="block text-[10px] text-outline">Reg: 04/12/2017</span>
+</td>
+<td class="py-3 px-3 align-top text-center whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[11px] font-semibold bg-surface-container-low text-on-tertiary-container">
+<span class="w-1.5 h-1.5 rounded-full bg-on-tertiary-container"></span>
+                  APROBADO
+                </span>
+</td>
+<td class="py-3 px-3 align-top text-right whitespace-nowrap">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1 rounded hover:bg-surface-container-high text-primary" title="Ver Visor" type="button">
+<span class="material-symbols-outlined text-base">visibility</span>
+</button>
+<button class="p-1 rounded hover:bg-surface-container-high text-on-surface-variant" title="Descargar" type="button">
+<span class="material-symbols-outlined text-base">download</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 4: Aprobado Certificado -->
+<tr class="hover:bg-surface-container transition-colors cursor-pointer group bg-surface-container-lowest" onclick="selectDocument('doc-4')">
+<td class="py-3 px-3 align-top whitespace-nowrap">
+<span class="font-code text-xs font-bold text-primary px-1.5 py-0.5 rounded bg-surface-container-high">045 - 047</span>
+<span class="block text-[10px] text-outline mt-0.5">3 fojas</span>
+</td>
+<td class="py-3 px-3 align-top">
+<div class="flex items-start gap-2">
+<span class="material-symbols-outlined text-on-surface-variant text-base mt-0.5 shrink-0">verified</span>
+<div>
+<span class="font-label-md text-label-md text-on-surface font-bold block group-hover:text-secondary transition-colors">Certificación Oficial de Suficiencia en Lengua Quechua Chanka</span>
+<span class="text-xs text-on-surface-variant block">Nivel Avanzado - Registro Nacional de Docentes Bilingües (RNDB)</span>
+<span class="text-[11px] text-outline font-code">Constancia DIGEIBIRA-MINEDU N° 2021-8934</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-3 align-top whitespace-nowrap">
+<span class="px-2 py-0.5 rounded text-[11px] font-semibold bg-surface-container text-on-surface">Certificación EIB</span>
+</td>
+<td class="py-3 px-3 align-top whitespace-nowrap">
+<span class="block text-xs font-medium">08/04/2021</span>
+<span class="block text-[10px] text-outline">Reg: 19/04/2021</span>
+</td>
+<td class="py-3 px-3 align-top text-center whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[11px] font-semibold bg-surface-container-low text-on-tertiary-container">
+<span class="w-1.5 h-1.5 rounded-full bg-on-tertiary-container"></span>
+                  APROBADO
+                </span>
+</td>
+<td class="py-3 px-3 align-top text-right whitespace-nowrap">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1 rounded hover:bg-surface-container-high text-primary" title="Ver Visor" type="button">
+<span class="material-symbols-outlined text-base">visibility</span>
+</button>
+<button class="p-1 rounded hover:bg-surface-container-high text-on-surface-variant" title="Descargar" type="button">
+<span class="material-symbols-outlined text-base">download</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Pagination / Summary footer -->
+<div class="p-3 bg-surface-container-lowest flex items-center justify-between font-body-sm text-body-sm text-on-surface-variant">
+<span>Mostrando 4 de 4 documentos de la Sección 03</span>
+<div class="flex items-center gap-1">
+<button class="px-2 py-1 rounded bg-surface-container text-primary font-bold text-xs disabled:opacity-50" type="button">1</button>
+</div>
+</div>
+</div>
+<!-- Right: Quick Preview & Verification Metadata Panel -->
+<div class="xl:col-span-3 space-y-space-sm">
+<!-- Active Document Inspection Card -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-md flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-base">verified_user</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-primary font-bold">Cotejo Digital Oficial</span>
+</div>
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-primary font-code text-xs font-bold">FOLIOS: 034-037</span>
+</div>
+<!-- Document Thumbnail / Graphical Facsimile Preview -->
+<div class="relative rounded-lg overflow-hidden bg-surface-container p-3 flex flex-col items-center justify-center text-center group">
+<img class="w-full h-44 object-cover rounded shadow-inner" data-alt="Miniatura escaneada de diploma universitario oficial peruano con escudo nacional filigranas de seguridad sellos de tinta institucional y firma digital cotejada" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCeaVudud2Xrnqx2WYNDK4wn75kzTrgE4fn0PALaQS6thfkAi2umZuVA5hTTpJWWRprtzcd7xIGuPg4Y9gbOUGKTcZSmkR7P5V4m-2cg8T7cy4KcwWXk3UFoQCFVqe7ToX1vlLXT4QWFEhWzAja5cYLP--wCprjFTbaW7YnSFsPyJxdEbLbrKtpgv04hvt_sQQlx8CMgVDllPrqBb9pDHiyXD0ms8h5YEzBxIRLyQM_c46oqaVoItcD"/>
+<div class="absolute inset-0 bg-primary/70 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col items-center justify-center gap-2 p-4">
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-lowest text-primary font-label-md text-label-md flex items-center gap-1 shadow" type="button">
+<span class="material-symbols-outlined text-sm">open_in_full</span>
+<span>Abrir Visor Completo</span>
+</button>
+<span class="text-[11px] text-on-primary">PDF PAdES - Hash Verificado</span>
+</div>
+<div class="absolute top-4 right-4 bg-tertiary text-tertiary-fixed text-[10px] font-bold px-2 py-0.5 rounded shadow">
+            SELLO REGIONAL DREH
+          </div>
+</div>
+<!-- Metadata Grid -->
+<div class="space-y-2 pt-1">
+<div>
+<span class="text-[11px] uppercase tracking-wider text-outline block font-semibold">Documento Activo</span>
+<span class="font-label-md text-label-md text-primary font-bold">Título Licenciado en Educación</span>
+</div>
+<div class="grid grid-cols-2 gap-2 text-xs">
+<div class="p-2 rounded bg-surface-container-low">
+<span class="text-[10px] text-outline block uppercase font-semibold">Institución Emisora</span>
+<span class="font-medium text-on-surface truncate block">Univ. Nac. de Huancavelica</span>
+</div>
+<div class="p-2 rounded bg-surface-container-low">
+<span class="text-[10px] text-outline block uppercase font-semibold">Registro SUNEDU</span>
+<span class="font-medium text-on-surface font-code">#458921-2010</span>
+</div>
+<div class="p-2 rounded bg-surface-container-low">
+<span class="text-[10px] text-outline block uppercase font-semibold">Fecha Cotejo</span>
+<span class="font-medium text-on-surface">14/03/2011 10:24</span>
+</div>
+<div class="p-2 rounded bg-surface-container-low">
+<span class="text-[10px] text-outline block uppercase font-semibold">Especialista</span>
+<span class="font-medium text-on-surface truncate block">Lic. J. Ramos (Admin)</span>
+</div>
+</div>
+<div class="p-2.5 rounded-lg bg-surface-container flex flex-col gap-1">
+<span class="text-[10px] uppercase tracking-wider text-outline font-bold">Firma Digital &amp; Algoritmo Criptográfico</span>
+<span class="font-code text-[10px] text-primary truncate">SHA-256: 8f3c7e990a1b8d744f...e3012ba4</span>
+<span class="inline-flex items-center gap-1 text-[11px] text-on-tertiary-container font-semibold">
+<span class="material-symbols-outlined text-xs">check_circle</span> Certificado por Reniec / ONPE (TSA Válida)
+            </span>
+</div>
+</div>
+<!-- Quick actions for inspected document -->
+<div class="flex flex-col gap-1.5 pt-1">
+<button class="w-full py-2 px-3 rounded-lg bg-primary-container text-on-primary font-label-md text-label-md flex items-center justify-center gap-1.5 hover:opacity-95 transition-opacity" type="button">
+<span class="material-symbols-outlined text-base">download</span>
+<span>Descargar Copia Certificada (PDF)</span>
+</button>
+<button class="w-full py-2 px-3 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md flex items-center justify-center gap-1.5 hover:bg-surface-container-high transition-colors" type="button">
+<span class="material-symbols-outlined text-base text-primary">qr_code_2</span>
+<span>Verificar Código QR SUNEDU</span>
+</button>
+</div>
+</div>
+<!-- Historical Trace Mini-Widget -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-md">
+<div class="flex items-center justify-between mb-3">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-primary font-bold">Trazabilidad del Expediente</span>
+<span class="material-symbols-outlined text-outline text-base">history</span>
+</div>
+<div class="relative pl-4 space-y-3 before:absolute before:left-1 before:top-2 before:bottom-2 before:w-0.5 before:bg-surface-container-high">
+<div class="relative">
+<span class="absolute -left-[19px] top-1 w-2.5 h-2.5 rounded-full bg-tertiary-container"></span>
+<span class="text-xs font-semibold text-on-surface block">Foliación Digital Aprobada</span>
+<span class="text-[11px] text-outline block">142 folios sellados electrónicamente • 10 Feb 2024</span>
+</div>
+<div class="relative">
+<span class="absolute -left-[19px] top-1 w-2.5 h-2.5 rounded-full bg-secondary-container"></span>
+<span class="text-xs font-semibold text-secondary block">Observación Emitida (Doc 038-041)</span>
+<span class="text-[11px] text-outline block">Notificado a servidor vía casilla digital • 24 Ene 2024</span>
+</div>
+<div class="relative">
+<span class="absolute -left-[19px] top-1 w-2.5 h-2.5 rounded-full bg-primary"></span>
+<span class="text-xs font-semibold text-on-surface block">Recepción de Expediente Modular</span>
+<span class="text-[11px] text-outline block">Mesa de Partes UGEL Huancavelica • 15 Ene 2024</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- MODAL: Cargar Nuevo Documento al Legajo (Hidden by default, opened by button) -->
+<div class="hidden fixed inset-0 z-50 bg-primary/45 backdrop-blur-xs flex items-center justify-center p-4" id="modal-upload-doc">
+<div class="bg-surface-container-lowest rounded-xl shadow-xl w-full max-w-2xl overflow-hidden animate-in fade-in zoom-in-95 duration-150">
+<div class="p-space-md bg-primary-container text-on-primary flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary-fixed">post_add</span>
+<h3 class="font-headline-sm text-headline-sm font-bold">Cargar Nuevo Documento al Legajo Digital</h3>
+</div>
+<button class="p-1 rounded-lg text-on-primary-container hover:text-on-primary hover:bg-surface-container-lowest/10 transition-colors" onclick="document.getElementById('modal-upload-doc').classList.add('hidden')" type="button">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<form class="p-space-md space-y-space-md" onsubmit="event.preventDefault(); alert('Documento registrado y foliado correctamente.'); document.getElementById('modal-upload-doc').classList.add('hidden');">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-sm">
+<!-- Seccion Normativa -->
+<div class="space-y-1 md:col-span-2">
+<label class="font-label-md text-label-md text-on-surface font-semibold flex items-center gap-1">
+              Sección Normativa del Legajo <span class="text-secondary">*</span>
+</label>
+<select class="w-full h-10 px-3 rounded-lg bg-surface font-body-sm text-body-sm text-on-surface focus:outline-none focus:bg-surface-container-lowest shadow-inner">
+<option selected="" value="03">Sección III: Formación y Grados Académicos (Títulos, Diplomas, Maestrías)</option>
+<option value="01">Sección I: Filiación e Identificación Personal</option>
+<option value="02">Sección II: Situación Laboral e Incorporación</option>
+<option value="04">Sección IV: Trayectoria Laboral y Ascensos</option>
+<option value="05">Sección V: Licencias, Permisos y Comisiones</option>
+<option value="06">Sección VI: Evaluaciones y Desempeño</option>
+<option value="07">Sección VII: Méritos, Estímulos y Felicitaciones</option>
+<option value="08">Sección VIII: Sanciones y Procesos Disciplinarios</option>
+<option value="09">Sección IX: Retiro, Ceses y Pensiones</option>
+<option value="10">Sección X: Beneficios, Compensaciones y Otros</option>
+</select>
+</div>
+<!-- Tipo de Documento -->
+<div class="space-y-1">
+<label class="font-label-md text-label-md text-on-surface font-semibold flex items-center gap-1">
+              Tipo de Documento <span class="text-secondary">*</span>
+</label>
+<select class="w-full h-10 px-3 rounded-lg bg-surface font-body-sm text-body-sm text-on-surface focus:outline-none focus:bg-surface-container-lowest shadow-inner">
+<option>Resolución Directoral (R.D.)</option>
+<option selected="">Título Profesional / Pedagógico</option>
+<option>Grado de Maestría o Doctorado</option>
+<option>Segunda Especialidad</option>
+<option>Diploma o Certificación Oficial</option>
+<option>Constancia de Registro SUNEDU</option>
+</select>
+</div>
+<!-- Número de Documento / R.D. -->
+<div class="space-y-1">
+<label class="font-label-md text-label-md text-on-surface font-semibold flex items-center gap-1">
+              Número / Código de Registro <span class="text-secondary">*</span>
+</label>
+<input class="w-full h-10 px-3 rounded-lg bg-surface font-body-sm text-body-sm text-on-surface focus:outline-none focus:bg-surface-container-lowest shadow-inner" placeholder="Ej: R.D. N° 0451-2024 / Tít. 00921" required="" type="text"/>
+</div>
+<!-- Título o Descripción -->
+<div class="space-y-1 md:col-span-2">
+<label class="font-label-md text-label-md text-on-surface font-semibold flex items-center gap-1">
+              Nombre / Descripción del Documento <span class="text-secondary">*</span>
+</label>
+<input class="w-full h-10 px-3 rounded-lg bg-surface font-body-sm text-body-sm text-on-surface focus:outline-none focus:bg-surface-container-lowest shadow-inner" placeholder="Ej: Diplomado en Didáctica de las Matemáticas - Univ. Nac. del Centro" required="" type="text"/>
+</div>
+<!-- Fecha de Emisión -->
+<div class="space-y-1">
+<label class="font-label-md text-label-md text-on-surface font-semibold flex items-center gap-1">
+              Fecha de Emisión <span class="text-secondary">*</span>
+</label>
+<input class="w-full h-10 px-3 rounded-lg bg-surface font-body-sm text-body-sm text-on-surface focus:outline-none focus:bg-surface-container-lowest shadow-inner" required="" type="date" value="2024-02-15"/>
+</div>
+<!-- Cantidad de Folios -->
+<div class="space-y-1">
+<label class="font-label-md text-label-md text-on-surface font-semibold flex items-center gap-1">
+              N° de Fojas / Folios <span class="text-secondary">*</span>
+</label>
+<input class="w-full h-10 px-3 rounded-lg bg-surface font-body-sm text-body-sm text-on-surface focus:outline-none focus:bg-surface-container-lowest shadow-inner" max="50" min="1" required="" type="number" value="2"/>
+<span class="text-[11px] text-outline">Se asignarán folios automáticos: 143 al 144</span>
+</div>
+<!-- File Upload Zone -->
+<div class="space-y-1 md:col-span-2">
+<label class="font-label-md text-label-md text-on-surface font-semibold flex items-center gap-1">
+              Archivo Digital PDF (Firma Digital PAdES / Certificado) <span class="text-secondary">*</span>
+</label>
+<div class="rounded-xl bg-surface-container-low p-6 flex flex-col items-center justify-center text-center cursor-pointer hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-primary text-3xl mb-1">upload_file</span>
+<span class="font-label-md text-label-md text-primary font-bold">Haga clic para seleccionar o arrastre el archivo aquí</span>
+<span class="text-xs text-on-surface-variant mt-1">Formato admitido: PDF (Máx. 25MB). Resolución mínima 300 DPI recomendada.</span>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-end gap-space-xs pt-2">
+<button class="px-4 py-2 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md hover:bg-surface-container-high transition-colors" onclick="document.getElementById('modal-upload-doc').classList.add('hidden')" type="button">
+            Cancelar
+          </button>
+<button class="px-5 py-2 rounded-lg bg-primary-container text-on-primary font-label-md text-label-md shadow-sm hover:opacity-95 transition-opacity" type="submit">
+            Guardar y Foliar Documento
+          </button>
+</div>
+</form>
+</div>
+</div>
+<!-- MODAL: Observación de Documento / Requerimiento de Subsanación -->
+<div class="hidden fixed inset-0 z-50 bg-primary/45 backdrop-blur-xs flex items-center justify-center p-4" id="modal-observation">
+<div class="bg-surface-container-lowest rounded-xl shadow-xl w-full max-w-lg overflow-hidden animate-in fade-in zoom-in-95 duration-150">
+<div class="p-space-md bg-secondary text-on-secondary flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined">rule</span>
+<h3 class="font-headline-sm text-headline-sm font-bold">Observación de Documento Escalafonario</h3>
+</div>
+<button class="p-1 rounded-lg text-on-secondary hover:bg-surface-container-lowest/10 transition-colors" onclick="document.getElementById('modal-observation').classList.add('hidden')" type="button">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<div class="p-space-md space-y-space-sm">
+<div class="p-3 rounded-lg bg-secondary-fixed text-on-secondary-fixed">
+<span class="text-xs font-bold block">Documento: Grado de Maestro en Gestión Educativa (Folios 038-041)</span>
+<span class="text-[11px] block mt-0.5">Servidor: Prof. Juan Carlos Ramos Condori • DNI: 42819034</span>
+</div>
+<div class="space-y-1">
+<label class="font-label-md text-label-md text-on-surface font-semibold">Tipo de Observación Normativa</label>
+<select class="w-full h-10 px-3 rounded-lg bg-surface font-body-sm text-body-sm text-on-surface focus:outline-none focus:bg-surface-container-lowest">
+<option>Falta de Legalización Notarial / Fedateo Institucional</option>
+<option selected="">Código QR o registro no cotejable en portal oficial</option>
+<option>Documento incompleto o fojas ilegibles</option>
+<option>Resolución carece de visto bueno de asesoría jurídica</option>
+</select>
+</div>
+<div class="space-y-1">
+<label class="font-label-md text-label-md text-on-surface font-semibold">Detalle del Requerimiento / Plazo de Subsanación</label>
+<textarea class="w-full p-3 rounded-lg bg-surface font-body-sm text-body-sm text-on-surface focus:outline-none focus:bg-surface-container-lowest" placeholder="Indicar con precisión la base legal y el plazo en días hábiles conforme a TUO de la Ley N° 27444..." rows="4">Se requiere al administrado remitir copia legalizada notarialmente del Grado Académico expedido por la UPLA o presentar la constancia de inscripción en el Registro Nacional de Grados y Títulos de la SUNEDU en un plazo improrrogable de 05 días hábiles.</textarea>
+</div>
+<div class="flex items-center gap-2 pt-1">
+<input checked="" class="rounded text-secondary focus:ring-0" id="notify-email" type="checkbox"/>
+<label class="text-xs text-on-surface" for="notify-email">Notificar automáticamente a la casilla electrónica y correo del docente</label>
+</div>
+<div class="flex items-center justify-end gap-space-xs pt-2">
+<button class="px-4 py-2 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md hover:bg-surface-container-high transition-colors" onclick="document.getElementById('modal-observation').classList.add('hidden')" type="button">
+            Cerrar
+          </button>
+<button class="px-5 py-2 rounded-lg bg-secondary text-on-secondary font-label-md text-label-md shadow-sm hover:opacity-95 transition-opacity" onclick="alert('Observación registrada y requerimiento emitido exitosamente.'); document.getElementById('modal-observation').classList.add('hidden');" type="button">
+            Emitir Observación Oficial
+          </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  function selectDocument(docId) {
+    // Micro-interaction for selecting document row
+    console.log("Documento seleccionado:", docId);
+  }
+</script></main></div><details id="vscode-nav"><summary>☰ Navegación</summary><div class="links"><a href="dashboard.html">Inicio</a><a href="servidores.html">Servidores</a><a href="legajo.html">Legajo</a><a href="traslado.html">Traslado</a><a href="auditoria.html">Auditoría</a><a href="ficha.html">Ficha</a><a href="portal-servidor.html">Portal servidor</a><a href="index.html">Salir</a></div></details><script src="app.js"></script></body></html>

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 60" fill="none">
+  <g transform="translate(10, 8)">
+    <!-- Escudo / Icono Institucional -->
+    <rect x="0" y="0" width="44" height="44" rx="10" fill="#0f2a4a"/>
+    <path d="M22 6 L36 13 L36 28 C36 36 22 41 22 41 C22 41 8 36 8 28 L8 13 Z" fill="#1e40af" stroke="#93c5fd" stroke-width="1.5"/>
+    <path d="M22 14 L30 19 L30 27 C30 31.5 22 35 22 35 C22 35 14 31.5 14 27 L14 19 Z" fill="#8b1d2c"/>
+    <!-- Libro de Escalafón y Pluma / Sol -->
+    <path d="M17 25 C19.5 23.5 22 24 22 24 C22 24 24.5 23.5 27 25 V30 C24.5 28.5 22 29 22 29 C22 29 19.5 28.5 17 30 Z" fill="#ffffff"/>
+    <circle cx="22" cy="19" r="2.5" fill="#fbbf24"/>
+  </g>
+  <!-- Tipografía Institucional -->
+  <text x="64" y="25" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="15" font-weight="800" fill="#0f2a4a" letter-spacing="0.5">DRE HUANCAVELICA</text>
+  <text x="64" y="41" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="600" fill="#8b1d2c" letter-spacing="0.2">SISTEMA DE GESTIÓN DE ESCALAFÓN</text>
+  <text x="64" y="52" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="8.5" font-weight="500" fill="#64748b">DIRECCIÓN REGIONAL DE EDUCACIÓN</text>
+</svg>

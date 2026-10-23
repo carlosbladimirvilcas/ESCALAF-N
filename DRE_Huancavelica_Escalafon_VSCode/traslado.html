@@ -1,0 +1,893 @@
+<!DOCTYPE html>
+
+<html lang="es"><head><style id="critical-icon-guard">html:not(.app-ready) body{visibility:hidden!important}.material-symbols-outlined{visibility:hidden!important}.app-icons-ready .material-symbols-outlined{visibility:visible!important}</style><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={"darkMode":"class","theme":{"extend":{"colors":{"on-secondary-fixed-variant":"#8e1029","on-primary-fixed":"#001c3a","surface":"#f8f9ff","primary":"#00152f","on-surface-variant":"#43474e","secondary-container":"#fd6673","on-background":"#0b1c30","surface-container":"#e5eeff","on-error-container":"#93000a","error":"#ba1a1a","surface-bright":"#f8f9ff","surface-container-lowest":"#ffffff","tertiary-container":"#00301e","primary-fixed":"#d4e3ff","inverse-on-surface":"#eaf1ff","secondary-fixed-dim":"#ffb3b5","on-secondary-container":"#680018","secondary-fixed":"#ffdada","on-secondary":"#ffffff","surface-dim":"#cbdbf5","surface-variant":"#d3e4fe","outline":"#74777f","on-error":"#ffffff","on-primary-container":"#7a92b7","secondary":"#af2c3e","tertiary-fixed":"#6ffbbe","primary-container":"#0f2a4a","on-tertiary-fixed":"#002113","tertiary-fixed-dim":"#4edea3","outline-variant":"#c4c6cf","error-container":"#ffdad6","on-surface":"#0b1c30","primary-fixed-dim":"#b0c8f0","surface-container-highest":"#d3e4fe","on-primary":"#ffffff","inverse-primary":"#b0c8f0","inverse-surface":"#213145","on-tertiary-container":"#00a472","on-tertiary":"#ffffff","on-primary-fixed-variant":"#304869","surface-container-low":"#eff4ff","tertiary":"#00190e","on-tertiary-fixed-variant":"#005236","background":"#f8f9ff","on-secondary-fixed":"#40000b","surface-container-high":"#dce9ff","surface-tint":"#485f82"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"space-xl":"2rem","space-lg":"1.5rem","gutter":"1.5rem","space-sm":"0.75rem","space-xs":"0.5rem","space-2xs":"0.25rem","space-md":"1rem","sidebar-width":"17.5rem","space-3xl":"4rem","max-container":"90rem","space-2xl":"3rem"},"fontFamily":{"headline-lg":["Plus Jakarta Sans"],"headline-md":["Plus Jakarta Sans"],"label-sm":["Inter"],"headline-sm":["Plus Jakarta Sans"],"label-md":["Inter"],"display":["Plus Jakarta Sans"],"body-lg":["Inter"],"body-sm":["Inter"],"code":["Inter"],"headline-lg-mobile":["Plus Jakarta Sans"],"body-md":["Inter"]},"fontSize":{"headline-lg":["1.75rem",{"lineHeight":"2.25rem","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-md":["1.25rem",{"lineHeight":"1.75rem","letterSpacing":"-0.015em","fontWeight":"600"}],"label-sm":["0.75rem",{"lineHeight":"1rem","letterSpacing":"0.04em","fontWeight":"600"}],"headline-sm":["1.125rem",{"lineHeight":"1.5rem","fontWeight":"600"}],"label-md":["0.875rem",{"lineHeight":"1.25rem","letterSpacing":"0.01em","fontWeight":"600"}],"display":["2.25rem",{"lineHeight":"2.75rem","letterSpacing":"-0.025em","fontWeight":"700"}],"body-lg":["1rem",{"lineHeight":"1.625rem","fontWeight":"400"}],"body-sm":["0.75rem",{"lineHeight":"1.125rem","fontWeight":"400"}],"code":["0.8125rem",{"lineHeight":"1rem","fontWeight":"500"}],"headline-lg-mobile":["1.375rem",{"lineHeight":"1.875rem","letterSpacing":"-0.015em","fontWeight":"700"}],"body-md":["0.875rem",{"lineHeight":"1.375rem","fontWeight":"400"}]}}}};</script><style id="vscode-nav-style">
+#vscode-nav{position:fixed;right:18px;bottom:18px;z-index:99999;background:#0f2a4a;color:#fff;border-radius:14px;box-shadow:0 10px 30px rgba(0,0,0,.25);font-family:Inter,Arial,sans-serif;overflow:hidden}#vscode-nav summary{cursor:pointer;padding:10px 14px;font-weight:700;list-style:none}#vscode-nav .links{display:flex;flex-direction:column;padding:0 8px 8px;gap:5px}#vscode-nav a{color:#fff;text-decoration:none;padding:8px 10px;border-radius:8px;font-size:13px;background:rgba(255,255,255,.08)}#vscode-nav a:hover{background:rgba(255,255,255,.18)}
+</style><link rel="stylesheet" href="app.css"></head><body class="bg-background font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-sidebar-width bg-surface-container-lowest z-50 flex flex-col shadow-[0_1px_8px_rgba(15,42,74,0.06)] overflow-y-auto"><div class="h-16 px-space-md flex items-center gap-space-sm bg-primary-container shrink-0"><img alt="Logo DRE Huancavelica Escalafón" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1XrEUogerzl4xaLiW4wdVJrrH8pMOYNUAGn7Cap-LeureQxJVxPKnYzuOtIuksQznfdBtYYh2wXlddk3Uo6TVi-XyxlCjWrx0PpdcQKNvgL3VA85vj6S19B6g8RARK8YT573dx7LbOHYfhkr7Z026dYvqHYhz6_BCSlSzTkm6ObhUQMnjrAMf7BKp6hxG-X0jvwFaN7IrTgJEXS2I5nsYgU538o9uddcgIfL_EdERPbw34DCDC5raMYCqY"/><div class="flex flex-col min-w-0"><span class="font-headline-sm text-headline-sm text-on-primary truncate tracking-tight">DRE Huancavelica</span><span class="font-label-sm text-label-sm text-on-primary-container tracking-wider uppercase truncate">Gestión de Escalafón</span></div></div><nav class="flex-1 px-space-xs py-space-sm space-y-space-md" data-active-classes="bg-primary-container text-on-primary"><div class="space-y-space-2xs"><span class="px-space-sm font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider block">Inicio</span><a class="flex items-center gap-space-xs px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="resumen-general" href="dashboard.html"><span class="material-symbols-outlined text-lg">dashboard</span><span class="font-label-md text-label-md truncate">Resumen General</span></a></div><div class="space-y-space-2xs"><span class="px-space-sm font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider block">Gestión Docente y Adm.</span><a class="flex items-center gap-space-xs px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="servidores-publicos" href="servidores.html"><span class="material-symbols-outlined text-lg">badge</span><span class="font-label-md text-label-md truncate">Servidores Públicos</span></a><a class="flex items-center gap-space-xs px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="ficha-de-escalafon" href="ficha.html"><span class="material-symbols-outlined text-lg">assignment_ind</span><span class="font-label-md text-label-md truncate">Ficha de Escalafón</span></a><a class="flex items-center gap-space-xs px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="legajo-digital" href="legajo.html"><span class="material-symbols-outlined text-lg">folder_shared</span><span class="font-label-md text-label-md truncate">Legajo Digital</span></a></div><div class="space-y-space-2xs"><span class="px-space-sm font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider block">Trámites y Requerimientos</span><a aria-current="page" class="flex items-center gap-space-xs px-space-sm py-2 rounded-lg transition-colors bg-primary-container text-on-primary" data-path="requerimientos" href="requerimientos.html"><span class="material-symbols-outlined text-lg">send_to_mobile</span><span class="font-label-md text-label-md truncate">Requerimientos</span></a><a class="flex items-center gap-space-xs px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="bandeja-de-solicitudes" href="bandeja-solicitudes.html"><span class="material-symbols-outlined text-lg">inbox</span><span class="font-label-md text-label-md truncate">Bandeja de Solicitudes</span></a><a class="flex items-center gap-space-xs px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="traslado-de-legajos" href="traslado.html"><span class="material-symbols-outlined text-lg">sync_alt</span><span class="font-label-md text-label-md truncate">Traslado de Legajos</span></a></div><div class="space-y-space-2xs"><span class="px-space-sm font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider block">Desarrollo y Acciones</span><a class="flex items-center gap-space-xs px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="acciones-formativas" href="acciones-formativas.html"><span class="material-symbols-outlined text-lg">school</span><span class="font-label-md text-label-md truncate">Acciones Formativas</span></a><a class="flex items-center gap-space-xs px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="resoluciones-y-licencias" href="resoluciones-licencias.html"><span class="material-symbols-outlined text-lg">gavel</span><span class="font-label-md text-label-md truncate">Resoluciones y Licencias</span></a><a class="flex items-center gap-space-xs px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="reportes-y-exportacion" href="reportes-exportacion.html"><span class="material-symbols-outlined text-lg">description</span><span class="font-label-md text-label-md truncate">Reportes y Exportación</span></a></div><div class="space-y-space-2xs"><span class="px-space-sm font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider block">Seguridad y Sistema</span><a class="flex items-center gap-space-xs px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="control-de-usuarios" href="control-usuarios.html"><span class="material-symbols-outlined text-lg">admin_panel_settings</span><span class="font-label-md text-label-md truncate">Control de Usuarios</span></a><a class="flex items-center gap-space-xs px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="auditoria-y-trazabilidad" href="auditoria-trazabilidad.html"><span class="material-symbols-outlined text-lg">history_edu</span><span class="font-label-md text-label-md truncate">Auditoría y Trazabilidad</span></a><a class="flex items-center gap-space-xs px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="configuracion-institucional" href="configuracion-institucional.html"><span class="material-symbols-outlined text-lg">settings</span><span class="font-label-md text-label-md truncate">Configuración Institucional</span></a></div></nav><div class="p-space-sm bg-surface-container-low mt-auto shrink-0"><div class="flex items-center justify-between mb-1"><span class="font-label-sm text-label-sm text-on-surface-variant">Versión 2.4.0</span><span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded bg-surface-container text-on-surface">PROD</span></div><a class="font-body-sm text-body-sm text-secondary hover:underline flex items-center gap-1" href="#"><span class="material-symbols-outlined text-xs">help</span>Mesa de Ayuda DRE</a></div></aside><div class="pl-sidebar-width min-h-screen flex flex-col"><header class="fixed top-0 left-sidebar-width right-0 h-16 bg-surface-container-lowest z-40 px-gutter flex items-center justify-between shadow-[0_1px_8px_rgba(15,42,74,0.04)]"><div class="flex items-center gap-space-md flex-1 max-w-2xl"><button class="p-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface focus:outline-none" type="button"><span class="material-symbols-outlined text-xl">menu</span></button><nav class="hidden md:flex items-center gap-2 font-label-md text-label-md text-on-surface-variant"><span class="text-on-surface-variant">Sede Central</span><span class="material-symbols-outlined text-xs">chevron_right</span><span class="text-on-surface">Escalafón Regional</span></nav><div class="relative flex-1"><span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-lg">search</span><input class="w-full h-10 pl-9 pr-4 rounded-lg bg-surface font-body-sm text-body-sm text-on-surface placeholder:text-outline focus:outline-none focus:bg-surface-container-lowest shadow-sm" placeholder="Buscar por DNI, nombres, código modular..." type="text"/></div></div><div class="flex items-center gap-space-md"><div class="hidden sm:flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-high text-primary"><span class="material-symbols-outlined text-sm">account_balance</span><span class="font-label-sm text-label-sm uppercase tracking-wider font-semibold">DRE Huancavelica</span></div><button class="relative p-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface focus:outline-none" type="button"><span class="material-symbols-outlined text-xl">notifications</span><span class="absolute top-1.5 right-1.5 w-4 h-4 bg-secondary text-on-secondary rounded-full font-label-sm text-label-sm flex items-center justify-center text-[10px] leading-none">3</span></button><div class="flex items-center gap-space-xs pl-space-xs"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDewevi67Mw6PxfpLBat9ZbwmAw3iRiDKUx3t13_hQHzvKX9LoyzsNF1JRr-hfwMsfXSwOgIxq2hJShcjTZvpAcZdI2pWaw5DZMuBiyKkSGgMBmA_xFw33SToN5bIMQDX5IMPMN_O_vjwuJ0ptzmvCeScGpr0S8RKX1ASSx0edwznaC85t28gqpAFYWxD1p5530h78lRs8DKFkVot-WvI37Pm8kX6TUjGa-hFXCLYMoXqNBlYxHMOD4"/><div class="hidden lg:flex flex-col text-left"><span class="font-label-md text-label-md text-on-surface truncate leading-tight">Lic. Juan Carlos Ramos</span><span class="font-label-sm text-label-sm text-on-surface-variant leading-none">Administrador de Escalafón</span></div><a class="p-1.5 text-on-surface-variant hover:text-secondary hover:bg-surface-container rounded-lg transition-colors ml-1" data-path="login" href="index.html" title="Cerrar Sesión"><span class="material-symbols-outlined text-lg">logout</span></a></div></div></header><main class="w-full pt-16 bg-surface flex-1 px-gutter py-space-lg max-w-max-container mx-auto"><div class="flex flex-col w-full gap-space-lg">
+<!-- Encabezado Institucional -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md bg-surface-container-lowest p-space-lg rounded-xl shadow-sm">
+<div class="flex flex-col gap-space-2xs min-w-0">
+<nav class="flex items-center gap-2 font-label-sm text-label-sm text-on-surface-variant">
+<span>Inicio</span>
+<span class="material-symbols-outlined text-xs">chevron_right</span>
+<span>Trámites y Requerimientos</span>
+<span class="material-symbols-outlined text-xs">chevron_right</span>
+<span class="text-primary font-semibold">Traslado de Legajos</span>
+</nav>
+<div class="flex items-center gap-space-sm flex-wrap">
+<h1 class="font-headline-lg text-headline-lg text-primary tracking-tight">
+          Gestión y Control de Traslado de Legajos Inter-UGEL
+        </h1>
+<span class="px-2.5 py-1 rounded-full bg-surface-container text-primary font-label-sm text-label-sm uppercase tracking-wider font-bold">
+          RVM N° 124-2023-MINEDU
+        </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-3xl">
+        Custodia, certificación y trazabilidad formal de expedientes escalafonarios transferidos entre las 7 sedes provinciales de la Región Huancavelica.
+      </p>
+</div>
+<div class="flex items-center gap-space-sm shrink-0 flex-wrap">
+<button class="flex items-center gap-2 px-space-md py-2.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface transition-all font-label-md text-label-md shadow-sm" id="btn-open-pdf" onclick="toggleModal('modal-acta')" type="button">
+<span class="material-symbols-outlined text-lg text-secondary">picture_as_pdf</span>
+<span>Acta de Entrega (PDF)</span>
+</button>
+<button class="flex items-center gap-2 px-space-md py-2.5 rounded-lg bg-primary-container hover:bg-primary text-on-primary transition-all font-label-md text-label-md shadow-sm" id="btn-toggle-form" onclick="toggleSection('form-traslado-panel')" type="button">
+<span class="material-symbols-outlined text-lg">add_circle</span>
+<span>+ Solicitar Nuevo Traslado</span>
+</button>
+</div>
+</div>
+<!-- Métricas de Traslado -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-space-md">
+<!-- Total Traslados -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden group">
+<div class="absolute -right-3 -top-3 w-16 h-16 bg-surface-container-low rounded-full flex items-center justify-center opacity-60 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-2xl text-on-primary-container">sync_alt</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-medium">Total 2025</span>
+<span class="font-display text-display text-primary font-bold mt-1">84</span>
+</div>
+<div class="flex items-center gap-1.5 mt-3 pt-2 text-on-surface-variant font-body-sm text-body-sm">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span>7 sedes activas</span>
+</div>
+</div>
+<!-- En Tránsito -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden group">
+<div class="absolute -right-3 -top-3 w-16 h-16 bg-surface-container rounded-full flex items-center justify-center opacity-60 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-2xl text-primary">local_shipping</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-medium">En Tránsito / Trámite</span>
+<div class="flex items-baseline gap-2 mt-1">
+<span class="font-display text-display text-primary font-bold">12</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm font-semibold">14.2%</span>
+</div>
+</div>
+<div class="flex items-center gap-1.5 mt-3 pt-2 text-on-surface-variant font-body-sm text-body-sm">
+<span class="w-2 h-2 rounded-full bg-surface-tint"></span>
+<span>En ruta valija / revisión</span>
+</div>
+</div>
+<!-- Aprobados / Validados -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden group">
+<div class="absolute -right-3 -top-3 w-16 h-16 bg-surface-container-low rounded-full flex items-center justify-center opacity-60 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-2xl text-on-tertiary-container">verified</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-medium">Aprobados / Validados</span>
+<div class="flex items-baseline gap-2 mt-1">
+<span class="font-display text-display text-on-surface font-bold">68</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-tertiary-container font-label-sm text-label-sm font-bold">81.0%</span>
+</div>
+</div>
+<div class="flex items-center gap-1.5 mt-3 pt-2 text-on-surface-variant font-body-sm text-body-sm">
+<span class="w-2 h-2 rounded-full bg-on-tertiary-container"></span>
+<span>Conformidad DREH</span>
+</div>
+</div>
+<!-- Observados -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden group">
+<div class="absolute -right-3 -top-3 w-16 h-16 bg-error-container rounded-full flex items-center justify-center opacity-60 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-2xl text-error">report_problem</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-medium">Observados</span>
+<div class="flex items-baseline gap-2 mt-1">
+<span class="font-display text-display text-secondary font-bold">04</span>
+<span class="px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed-variant font-label-sm text-label-sm font-bold">Subsanando</span>
+</div>
+</div>
+<div class="flex items-center gap-1.5 mt-3 pt-2 text-on-surface-variant font-body-sm text-body-sm">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span>Faltan folios / visado</span>
+</div>
+</div>
+<!-- Tiempo Promedio -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden group">
+<div class="absolute -right-3 -top-3 w-16 h-16 bg-surface-container rounded-full flex items-center justify-center opacity-60 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-2xl text-on-surface">schedule</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-medium">Tiempo Promedio</span>
+<div class="flex items-baseline gap-1 mt-1">
+<span class="font-display text-display text-primary font-bold">4.2</span>
+<span class="font-label-md text-label-md text-on-surface-variant">días hábiles</span>
+</div>
+</div>
+<div class="flex items-center gap-1.5 mt-3 pt-2 text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-xs text-on-tertiary-container">check_circle</span>
+<span>Meta SERVIR: &lt; 5 días</span>
+</div>
+</div>
+</div>
+<!-- Formulario Colapsable: Nuevo Registro de Traslado -->
+<div class="hidden bg-surface-container-lowest rounded-xl shadow-md p-space-lg transition-all duration-300" id="form-traslado-panel">
+<div class="flex items-center justify-between pb-space-md mb-space-md border-b border-transparent">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-primary-container text-on-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-xl">post_add</span>
+</div>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-primary">Solicitud de Expediente de Traslado Inter-UGEL</h2>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Complete los requisitos normativos según la RVM N° 124-2023-MINEDU</span>
+</div>
+</div>
+<button class="p-2 text-on-surface-variant hover:text-on-surface rounded-lg hover:bg-surface-container transition-colors" onclick="toggleSection('form-traslado-panel')" type="button">
+<span class="material-symbols-outlined text-xl">close</span>
+</button>
+</div>
+<form class="flex flex-col gap-space-lg" onsubmit="event.preventDefault(); alert('Solicitud de traslado N° EXP-2025-0085 registrada con éxito.'); toggleSection('form-traslado-panel');">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-md">
+<!-- Servidor Público Selector -->
+<div class="flex flex-col gap-1 lg:col-span-2">
+<label class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider flex items-center gap-1">
+            Servidor Público (DNI o Nombres) <span class="text-secondary font-bold">*</span>
+</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-lg">search</span>
+<input class="w-full h-10 pl-10 pr-24 rounded-lg bg-surface font-body-sm text-body-sm text-on-surface focus:outline-none focus:bg-surface-container-lowest shadow-sm" placeholder="Ingrese DNI o apellidos completos..." required="" type="text" value="42819034 - Prof. Juan Carlos Ramos Condori"/>
+<span class="absolute right-2 top-1/2 -translate-y-1/2 px-2 py-0.5 rounded bg-surface-container text-primary font-label-sm text-label-sm font-semibold">
+              Ley 29944
+            </span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Docente Nombrado - Escala Magisterial IV - Plaza: 110291321415</span>
+</div>
+<!-- Cantidad de Folios -->
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider flex items-center gap-1">
+            Cant. Folios a Transferir <span class="text-secondary font-bold">*</span>
+</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-lg">layers</span>
+<input class="w-full h-10 pl-10 pr-4 rounded-lg bg-surface font-body-sm text-body-sm text-on-surface focus:outline-none focus:bg-surface-container-lowest shadow-sm" placeholder="Número de folios útiles" required="" type="number" value="142"/>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Físicos sellados y correlativo digital</span>
+</div>
+<!-- UGEL Origen -->
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider flex items-center gap-1">
+            UGEL de Origen <span class="text-secondary font-bold">*</span>
+</label>
+<select class="w-full h-10 px-3 rounded-lg bg-surface font-body-sm text-body-sm text-on-surface focus:outline-none focus:bg-surface-container-lowest shadow-sm">
+<option selected="" value="angaraes">UGEL Angaraes (I.E. Nuestra Sra. del Carmen)</option>
+<option value="huancavelica">UGEL Huancavelica</option>
+<option value="acobamba">UGEL Acobamba</option>
+<option value="tayacaja">UGEL Tayacaja</option>
+<option value="churcampa">UGEL Churcampa</option>
+<option value="castrovirreyna">UGEL Castrovirreyna</option>
+<option value="huaytara">UGEL Huaytará</option>
+</select>
+</div>
+<!-- UGEL Destino -->
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider flex items-center gap-1">
+            UGEL de Destino <span class="text-secondary font-bold">*</span>
+</label>
+<select class="w-full h-10 px-3 rounded-lg bg-surface font-body-sm text-body-sm text-on-surface focus:outline-none focus:bg-surface-container-lowest shadow-sm">
+<option selected="" value="huancavelica">UGEL Huancavelica (I.E.E. La Victoria de Ayacucho)</option>
+<option value="angaraes">UGEL Angaraes</option>
+<option value="acobamba">UGEL Acobamba</option>
+<option value="tayacaja">UGEL Tayacaja</option>
+<option value="churcampa">UGEL Churcampa</option>
+<option value="castrovirreyna">UGEL Castrovirreyna</option>
+<option value="huaytara">UGEL Huaytará</option>
+</select>
+</div>
+<!-- Motivo de Traslado -->
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider flex items-center gap-1">
+            Motivo del Traslado <span class="text-secondary font-bold">*</span>
+</label>
+<select class="w-full h-10 px-3 rounded-lg bg-surface font-body-sm text-body-sm text-on-surface focus:outline-none focus:bg-surface-container-lowest shadow-sm">
+<option selected="" value="reasignacion">Reasignación por Interés Personal</option>
+<option value="permuta">Permuta Regional</option>
+<option value="ascenso">Ascenso a Cargo Directivo / Jerárquico</option>
+<option value="unidad_familiar">Reasignación por Unidad Familiar</option>
+<option value="racionalizacion">Racionalización de Plazas</option>
+<option value="salud">Reasignación por Razones de Salud</option>
+</select>
+</div>
+<!-- Acto Resolutivo Sustentatorio -->
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider flex items-center gap-1">
+            N° Acto Resolutivo (R.D.) <span class="text-secondary font-bold">*</span>
+</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-lg">gavel</span>
+<input class="w-full h-10 pl-10 pr-4 rounded-lg bg-surface font-body-sm text-body-sm text-on-surface focus:outline-none focus:bg-surface-container-lowest shadow-sm" placeholder="Ej: R.D. N° 00412-2025-ED" required="" type="text" value="R.D. N° 01482-2024-DREH"/>
+</div>
+</div>
+<!-- Fecha de Emisión -->
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider flex items-center gap-1">
+            Fecha de Emisión de R.D. <span class="text-secondary font-bold">*</span>
+</label>
+<input class="w-full h-10 px-3 rounded-lg bg-surface font-body-sm text-body-sm text-on-surface focus:outline-none focus:bg-surface-container-lowest shadow-sm" required="" type="date" value="2025-01-14"/>
+</div>
+<!-- Adjunto Digital del Legajo -->
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider flex items-center gap-1">
+            Certificado Digital (PDF/ZIP)
+          </label>
+<div class="flex items-center gap-2 h-10 px-3 rounded-lg bg-surface text-on-surface-variant font-body-sm text-body-sm cursor-pointer hover:bg-surface-container shadow-sm">
+<span class="material-symbols-outlined text-lg text-primary">cloud_upload</span>
+<span class="truncate">LEGAJO_RAMOS_42819034_FIRMADOREG.pdf</span>
+</div>
+</div>
+</div>
+<!-- Observación o Referencia Adicional -->
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">
+          Observaciones de Foliación / Estado Físico del Legajo
+        </label>
+<textarea class="w-full p-3 rounded-lg bg-surface font-body-sm text-body-sm text-on-surface focus:outline-none focus:bg-surface-container-lowest shadow-sm" placeholder="Consigne si cuenta con carpeta auxiliar, tomo 1 y 2, estado de conservación de carpetas de filiación..." rows="2">Legajo original completo en archivador plástico oficial MINEDU. Contiene Tomo I (102 folios) y Tomo II (40 folios). Sello y rúbrica de foliatura actualizada a diciembre 2024 por Escalafón UGEL Angaraes.</textarea>
+</div>
+<!-- Botones del Formulario -->
+<div class="flex items-center justify-end gap-space-sm pt-space-xs">
+<button class="px-space-md py-2 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md transition-colors" onclick="toggleSection('form-traslado-panel')" type="button">
+          Cancelar
+        </button>
+<button class="px-space-md py-2 rounded-lg bg-surface-container-highest hover:bg-surface-dim text-primary font-label-md text-label-md transition-colors flex items-center gap-1" onclick="alert('Borrador guardado localmente.');" type="button">
+<span class="material-symbols-outlined text-base">save</span>
+<span>Guardar Borrador</span>
+</button>
+<button class="px-space-lg py-2 rounded-lg bg-secondary hover:bg-on-secondary-container text-on-secondary font-label-md text-label-md shadow-sm transition-colors flex items-center gap-1.5" type="submit">
+<span class="material-symbols-outlined text-base">send</span>
+<span>Iniciar Proceso de Traslado</span>
+</button>
+</div>
+</form>
+</div>
+<!-- Bandeja Principal de Traslados (Data Table) -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden flex flex-col">
+<!-- Header de la tabla y Filtros -->
+<div class="p-space-md flex flex-col lg:flex-row lg:items-center justify-between gap-space-md bg-surface-container-low/50">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-2xl">swap_horizontal_circle</span>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Bandeja Oficial de Expedientes en Tránsito</h2>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Filtrado en tiempo real según jurisdicción regional</span>
+</div>
+</div>
+<!-- Controles de filtrado rápido -->
+<div class="flex flex-wrap items-center gap-2">
+<div class="flex items-center bg-surface rounded-lg px-2 shadow-sm">
+<span class="font-label-sm text-label-sm text-on-surface-variant px-1">Estado:</span>
+<select class="h-9 bg-transparent font-body-sm text-body-sm text-on-surface focus:outline-none pr-3" id="filter-status" onchange="filterRows()">
+<option value="TODOS">Todos (84)</option>
+<option value="EN TRÁNSITO">En Tránsito (12)</option>
+<option value="APROBADO">Aprobado / Validado (68)</option>
+<option value="OBSERVADO">Observado (4)</option>
+<option value="SOLICITADO">Solicitado</option>
+</select>
+</div>
+<div class="flex items-center bg-surface rounded-lg px-2 shadow-sm">
+<span class="font-label-sm text-label-sm text-on-surface-variant px-1">UGEL:</span>
+<select class="h-9 bg-transparent font-body-sm text-body-sm text-on-surface focus:outline-none pr-3" id="filter-ugel" onchange="filterRows()">
+<option value="TODAS">Todas las UGELs</option>
+<option value="ANGARAES">Angaraes</option>
+<option value="HUANCAVELICA">Huancavelica</option>
+<option value="TAYACAJA">Tayacaja</option>
+<option value="ACOBAMBA">Acobamba</option>
+<option value="CHURCAMPA">Churcampa</option>
+<option value="CASTROVIRREYNA">Castrovirreyna</option>
+<option value="HUAYTARÁ">Huaytará</option>
+</select>
+</div>
+<button class="p-2 rounded-lg bg-surface text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors shadow-sm" onclick="filterRows(true)" title="Restablecer filtros" type="button">
+<span class="material-symbols-outlined text-lg">filter_alt_off</span>
+</button>
+</div>
+</div>
+<!-- Tabla -->
+<div class="overflow-x-auto">
+<table class="w-full text-left font-body-md text-body-md" id="tabla-traslados">
+<thead>
+<tr class="bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">
+<th class="py-3.5 px-4">N° Expediente</th>
+<th class="py-3.5 px-4">Servidor Público</th>
+<th class="py-3.5 px-4">Trayecto Inter-UGEL</th>
+<th class="py-3.5 px-4">Motivo &amp; R.D.</th>
+<th class="py-3.5 px-4 text-center">Folios</th>
+<th class="py-3.5 px-4 text-center">Fecha Reg.</th>
+<th class="py-3.5 px-4 text-center">Estado</th>
+<th class="py-3.5 px-4 text-right">Acciones</th>
+</tr>
+</thead>
+<tbody class="divide-y-0" id="tabla-cuerpo">
+<!-- Fila 1: En Tránsito (Angaraes -> Huancavelica) -->
+<tr class="hover:bg-surface-container-low/60 transition-colors group">
+<td class="py-3 px-4 whitespace-nowrap">
+<span class="font-code text-code text-primary font-bold">EXP-2025-0084</span>
+<span class="block font-label-sm text-label-sm text-on-surface-variant">Guía #891-VAL</span>
+</td>
+<td class="py-3 px-4 whitespace-nowrap">
+<div class="flex items-center gap-space-xs">
+<img class="w-9 h-9 rounded-full object-cover bg-surface-container" data-alt="Close-up institutional studio portrait of a Peruvian male senior teacher from Huancavelica, Andean features, wearing dark navy formal suit and glasses with neutral corporate lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD03B5tv6YJz9iy4JIA_FCeGrO9xiBZzSEuuYGcaNEAjvTSSOaPUOrbbCLKwQcpizWcuf85Gt5T_ZwdIKdFo62Izv501GDjSCthCsr9C1sl4g2fWlNDF5G2J44JrVJhyzFdzPtT0FluzYIkR4GRcYWZnPF97teNTV6in4Yyj1XgstRKkaWBlzOnK4gZBalJX4gKjvSgy3IKfmtQaCTzygW1m9vGItE8BSkXmhg9zZS75Sh0LSMcHWaT"/>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface font-semibold truncate">Juan Carlos Ramos Condori</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-code">DNI 42819034</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-4 whitespace-nowrap">
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface font-label-sm text-label-sm font-medium">UGEL Angaraes</span>
+<span class="material-symbols-outlined text-sm text-secondary">trending_flat</span>
+<span class="px-2 py-0.5 rounded bg-primary-container text-on-primary font-label-sm text-label-sm font-medium">UGEL Huancavelica</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant block mt-0.5">I.E. Nuestra Sra. del Carmen → I.E.E. La Victoria de Ayacucho</span>
+</td>
+<td class="py-3 px-4 whitespace-nowrap">
+<span class="font-label-sm text-label-sm text-primary font-medium block">Reasignación Interés Personal</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant font-code">R.D. 01482-2024-DREH</span>
+</td>
+<td class="py-3 px-4 text-center whitespace-nowrap">
+<span class="font-label-md text-label-md text-on-surface font-bold">142</span>
+<span class="block font-label-sm text-label-sm text-on-surface-variant">2 Tomos</span>
+</td>
+<td class="py-3 px-4 text-center whitespace-nowrap">
+<span class="font-body-sm text-body-sm text-on-surface">15/01/2025</span>
+<span class="block font-label-sm text-label-sm text-on-surface-variant">09:30 AM</span>
+</td>
+<td class="py-3 px-4 text-center whitespace-nowrap">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container text-primary font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+                EN TRÁNSITO
+              </span>
+</td>
+<td class="py-3 px-4 text-right whitespace-nowrap">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1.5 rounded-lg text-primary hover:bg-surface-container transition-colors" onclick="openDossierModal('EXP-2025-0084', 'Juan Carlos Ramos Condori', '42819034', 'UGEL Angaraes', 'UGEL Huancavelica', 142, 'EN TRÁNSITO')" title="Ver Detalle de Expediente" type="button">
+<span class="material-symbols-outlined text-lg">visibility</span>
+</button>
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" onclick="alert('Generando Guía Oficial de Despacho de Valija #891-VAL')" title="Imprimir Guía de Envío" type="button">
+<span class="material-symbols-outlined text-lg">local_shipping</span>
+</button>
+<button class="p-1.5 rounded-lg text-on-tertiary-container hover:bg-surface-container transition-colors" onclick="alert('Conformidad otorgada para EXP-2025-0084')" title="Recepcionar / Dar Conformidad" type="button">
+<span class="material-symbols-outlined text-lg">fact_check</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Fila 2: Aprobado / Validado (Tayacaja -> Acobamba) -->
+<tr class="hover:bg-surface-container-low/60 transition-colors group">
+<td class="py-3 px-4 whitespace-nowrap">
+<span class="font-code text-code text-primary font-bold">EXP-2025-0081</span>
+<span class="block font-label-sm text-label-sm text-on-surface-variant">Guía #879-VAL</span>
+</td>
+<td class="py-3 px-4 whitespace-nowrap">
+<div class="flex items-center gap-space-xs">
+<img class="w-9 h-9 rounded-full object-cover bg-surface-container" data-alt="Professional portrait of a female Peruvian school principal from Tayacaja Huancavelica, warm corporate Andean office environment, formal attire and friendly confident expression" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZZYU-sk8Etnuai6b00XYU5YaCOPjFU6jT3jIcJTWA1WXDGVxO-Ime__l18HSwJZ-0LHeGNmUfYcAH-gnBVh1yFTeqH9rcZe2SVxHFbpiNdIElIHbnltVzu_paUWrg0r1Xyp8Ier8viKUeHzTThHgUfFKFpq9-oka262WACfynNwCn9IAdN38KWIzmr-rb--w3OqhFhK9GSXrXEASQ-C7YrymxtOOzpCvy7vNm3JmHdckxMer1JcCh"/>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface font-semibold truncate">María Elena Quispe Huamán</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-code">DNI 23590118</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-4 whitespace-nowrap">
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface font-label-sm text-label-sm font-medium">UGEL Tayacaja</span>
+<span class="material-symbols-outlined text-sm text-secondary">trending_flat</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface font-label-sm text-label-sm font-medium">UGEL Acobamba</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant block mt-0.5">I.E. Mariscal Cáceres → I.E. San Francisco de Asís</span>
+</td>
+<td class="py-3 px-4 whitespace-nowrap">
+<span class="font-label-sm text-label-sm text-primary font-medium block">Ascenso Directivo</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant font-code">R.D. 00892-2024-DREH</span>
+</td>
+<td class="py-3 px-4 text-center whitespace-nowrap">
+<span class="font-label-md text-label-md text-on-surface font-bold">198</span>
+<span class="block font-label-sm text-label-sm text-on-surface-variant">3 Tomos</span>
+</td>
+<td class="py-3 px-4 text-center whitespace-nowrap">
+<span class="font-body-sm text-body-sm text-on-surface">12/01/2025</span>
+<span class="block font-label-sm text-label-sm text-on-surface-variant">11:15 AM</span>
+</td>
+<td class="py-3 px-4 text-center whitespace-nowrap">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container text-on-tertiary-container font-label-sm text-label-sm font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-on-tertiary-container"></span>
+                APROBADO
+              </span>
+</td>
+<td class="py-3 px-4 text-right whitespace-nowrap">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1.5 rounded-lg text-primary hover:bg-surface-container transition-colors" onclick="openDossierModal('EXP-2025-0081', 'María Elena Quispe Huamán', '23590118', 'UGEL Tayacaja', 'UGEL Acobamba', 198, 'APROBADO')" title="Ver Detalle de Expediente" type="button">
+<span class="material-symbols-outlined text-lg">visibility</span>
+</button>
+<button class="p-1.5 rounded-lg text-secondary hover:bg-surface-container transition-colors" onclick="toggleModal('modal-acta')" title="Descargar Acta de Cierre y Apertura" type="button">
+<span class="material-symbols-outlined text-lg">file_download</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Fila 3: Observado (Churcampa -> Castrovirreyna) -->
+<tr class="hover:bg-surface-container-low/60 transition-colors group">
+<td class="py-3 px-4 whitespace-nowrap">
+<span class="font-code text-code text-secondary font-bold">EXP-2025-0077</span>
+<span class="block font-label-sm text-label-sm text-secondary">Obs: Folio 89</span>
+</td>
+<td class="py-3 px-4 whitespace-nowrap">
+<div class="flex items-center gap-space-xs">
+<img class="w-9 h-9 rounded-full object-cover bg-surface-container" data-alt="Portrait of a Peruvian secondary school teacher, indigenous Quechua heritage, Churcampa Huancavelica, standing in front of high altitude school library, navy blue blazer" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBvMdfM7JLfME6lGiDhjBKzXiAxZDm9WJHL4yvmQ_fHay6y-0VQbiT_pNuCZnRZb2WKv9IHbAFCr-_1MXTjk_pEJ9wY83YnwQa6jTjfgGmSfKnT-3lWPaQivfekyatxA4TPaiqZNqmQBXsDHuR9AbAE5WRAH470gWymZK76oWw6BDJ6o-1wOXNa4qOkwlV6MUdiOHPyu170ebhYdfyKOvQiW2scd1eo5oFZvAMz64ZqTJZ3oq1fFNIQ"/>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface font-semibold truncate">Raúl Esteban Zuasnabar Paucar</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-code">DNI 40182376</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-4 whitespace-nowrap">
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface font-label-sm text-label-sm font-medium">UGEL Churcampa</span>
+<span class="material-symbols-outlined text-sm text-secondary">trending_flat</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface font-label-sm text-label-sm font-medium">UGEL Castrovirreyna</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant block mt-0.5">I.E. Túpac Amaru → I.E. Los Libertadores</span>
+</td>
+<td class="py-3 px-4 whitespace-nowrap">
+<span class="font-label-sm text-label-sm text-primary font-medium block">Permuta Regional</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant font-code">R.D. 00311-2025-DREH</span>
+</td>
+<td class="py-3 px-4 text-center whitespace-nowrap">
+<span class="font-label-md text-label-md text-on-surface font-bold">96</span>
+<span class="block font-label-sm text-label-sm text-on-surface-variant">1 Tomo</span>
+</td>
+<td class="py-3 px-4 text-center whitespace-nowrap">
+<span class="font-body-sm text-body-sm text-on-surface">10/01/2025</span>
+<span class="block font-label-sm text-label-sm text-on-surface-variant">16:40 PM</span>
+</td>
+<td class="py-3 px-4 text-center whitespace-nowrap">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed-variant font-label-sm text-label-sm font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                OBSERVADO
+              </span>
+</td>
+<td class="py-3 px-4 text-right whitespace-nowrap">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1.5 rounded-lg text-primary hover:bg-surface-container transition-colors" onclick="openDossierModal('EXP-2025-0077', 'Raúl Esteban Zuasnabar Paucar', '40182376', 'UGEL Churcampa', 'UGEL Castrovirreyna', 96, 'OBSERVADO')" title="Ver Detalle de Observación" type="button">
+<span class="material-symbols-outlined text-lg">visibility</span>
+</button>
+<button class="p-1.5 rounded-lg text-secondary hover:bg-surface-container transition-colors" onclick="alert('Notificando formalmente a Especialista de Escalafón UGEL Churcampa')" title="Emitir Notificación de Subsanación" type="button">
+<span class="material-symbols-outlined text-lg">notification_important</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Fila 4: En Revisión / Trámite (Huaytará -> Huancavelica) -->
+<tr class="hover:bg-surface-container-low/60 transition-colors group">
+<td class="py-3 px-4 whitespace-nowrap">
+<span class="font-code text-code text-primary font-bold">EXP-2025-0075</span>
+<span class="block font-label-sm text-label-sm text-on-surface-variant">Guía #865-VAL</span>
+</td>
+<td class="py-3 px-4 whitespace-nowrap">
+<div class="flex items-center gap-space-xs">
+<div class="w-9 h-9 rounded-full bg-primary-container text-on-primary flex items-center justify-center font-label-md text-label-md font-bold">
+                  GC
+                </div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface font-semibold truncate">Gladys Ccanto Mendoza</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-code">DNI 41908812</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-4 whitespace-nowrap">
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface font-label-sm text-label-sm font-medium">UGEL Huaytará</span>
+<span class="material-symbols-outlined text-sm text-secondary">trending_flat</span>
+<span class="px-2 py-0.5 rounded bg-primary-container text-on-primary font-label-sm text-label-sm font-medium">UGEL Huancavelica</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant block mt-0.5">I.E. San Juan Bautista → Sede DRE Huancavelica</span>
+</td>
+<td class="py-3 px-4 whitespace-nowrap">
+<span class="font-label-sm text-label-sm text-primary font-medium block">Racionalización Administrativa</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant font-code">R.D. 00298-2025-DREH</span>
+</td>
+<td class="py-3 px-4 text-center whitespace-nowrap">
+<span class="font-label-md text-label-md text-on-surface font-bold">115</span>
+<span class="block font-label-sm text-label-sm text-on-surface-variant">2 Tomos</span>
+</td>
+<td class="py-3 px-4 text-center whitespace-nowrap">
+<span class="font-body-sm text-body-sm text-on-surface">09/01/2025</span>
+<span class="block font-label-sm text-label-sm text-on-surface-variant">10:00 AM</span>
+</td>
+<td class="py-3 px-4 text-center whitespace-nowrap">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container text-primary font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+                EN TRÁNSITO
+              </span>
+</td>
+<td class="py-3 px-4 text-right whitespace-nowrap">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1.5 rounded-lg text-primary hover:bg-surface-container transition-colors" onclick="openDossierModal('EXP-2025-0075', 'Gladys Ccanto Mendoza', '41908812', 'UGEL Huaytará', 'UGEL Huancavelica', 115, 'EN TRÁNSITO')" title="Ver Detalle de Expediente" type="button">
+<span class="material-symbols-outlined text-lg">visibility</span>
+</button>
+<button class="p-1.5 rounded-lg text-on-tertiary-container hover:bg-surface-container transition-colors" onclick="alert('Registrando Conformidad de Recepción Física en Archivo DRE Huancavelica')" title="Recepcionar / Dar Conformidad" type="button">
+<span class="material-symbols-outlined text-lg">fact_check</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Paginación de Tabla -->
+<div class="p-space-sm px-space-md bg-surface-container-lowest flex flex-col sm:flex-row items-center justify-between gap-space-xs font-body-sm text-body-sm text-on-surface-variant">
+<span>Mostrando registros 1 a 4 de un total de 84 expedientes de traslado regional</span>
+<div class="flex items-center gap-1">
+<button class="px-2.5 py-1 rounded bg-surface-container text-on-surface-variant hover:text-on-surface disabled:opacity-40" disabled="">Anterior</button>
+<button class="w-7 h-7 rounded bg-primary-container text-on-primary font-bold flex items-center justify-center">1</button>
+<button class="w-7 h-7 rounded bg-surface text-on-surface hover:bg-surface-container flex items-center justify-center">2</button>
+<button class="w-7 h-7 rounded bg-surface text-on-surface hover:bg-surface-container flex items-center justify-center">3</button>
+<span class="px-1">...</span>
+<button class="w-7 h-7 rounded bg-surface text-on-surface hover:bg-surface-container flex items-center justify-center">21</button>
+<button class="px-2.5 py-1 rounded bg-surface-container text-on-surface hover:bg-surface-container-high">Siguiente</button>
+</div>
+</div>
+</div>
+<!-- Flujo Normativo y Trazabilidad del Traslado -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-space-md">
+<!-- Panel del Proceso Normativo en 4 Fases -->
+<div class="lg:col-span-2 bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between pb-space-sm mb-space-md">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-xl">account_tree</span>
+<h3 class="font-headline-sm text-headline-sm text-primary">Flujo Normativo Institucional del Traslado</h3>
+</div>
+<span class="px-2 py-0.5 rounded bg-surface-container text-primary font-label-sm text-label-sm font-semibold">
+          R.V.M. N° 124-2023-MINEDU
+        </span>
+</div>
+<!-- Diagrama de Pasos -->
+<div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-space-sm relative">
+<!-- Paso 1 -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-2 relative">
+<div class="flex items-center justify-between">
+<span class="w-6 h-6 rounded-full bg-primary text-on-primary font-label-sm text-label-sm font-bold flex items-center justify-center">1</span>
+<span class="material-symbols-outlined text-lg text-primary">assignment</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface font-semibold leading-snug">Solicitud y R.D. Sustentatoria</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Emisión de la Resolución Directoral de reasignación/permuta e ingreso formal al sistema.
+          </p>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-auto">Plazo máx: 24 hrs</span>
+</div>
+<!-- Paso 2 -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-2 relative">
+<div class="flex items-center justify-between">
+<span class="w-6 h-6 rounded-full bg-primary text-on-primary font-label-sm text-label-sm font-bold flex items-center justify-center">2</span>
+<span class="material-symbols-outlined text-lg text-primary">inventory</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface font-semibold leading-snug">Foliación y Cierre en Origen</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Arqueo de documentos, cierre de carpetas y emisión del Acta de Cierre por el custodio de UGEL origen.
+          </p>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-auto">Plazo máx: 48 hrs</span>
+</div>
+<!-- Paso 3 -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-2 relative">
+<div class="flex items-center justify-between">
+<span class="w-6 h-6 rounded-full bg-secondary text-on-secondary font-label-sm text-label-sm font-bold flex items-center justify-center">3</span>
+<span class="material-symbols-outlined text-lg text-secondary">verified_user</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface font-semibold leading-snug">Visado y Control DREH</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Inspección de autenticidad y generación de la Guía Oficial de Valija por la sede central DRE Huancavelica.
+          </p>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-auto">Plazo máx: 24 hrs</span>
+</div>
+<!-- Paso 4 -->
+<div class="p-space-sm rounded-lg bg-surface-container flex flex-col gap-2 relative">
+<div class="flex items-center justify-between">
+<span class="w-6 h-6 rounded-full bg-on-tertiary-container text-on-tertiary font-label-sm text-label-sm font-bold flex items-center justify-center">4</span>
+<span class="material-symbols-outlined text-lg text-on-tertiary-container">folder_open</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface font-semibold leading-snug">Recepción y Apertura</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Conformidad física en UGEL destino, firma del acta de recepción y alta en el registro escalafonario local.
+          </p>
+<span class="font-label-sm text-label-sm text-on-tertiary-container font-semibold mt-auto">Finalización Legal</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm flex-wrap gap-2">
+<span class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-base text-secondary">security</span>
+          Trazabilidad criptográfica protegida con firma digital Reniec / Ontp.
+        </span>
+<a class="text-primary hover:underline font-label-sm text-label-sm font-semibold flex items-center gap-1" href="#" onclick="alert('Descargando compendio normativo Directiva SERVIR 2024'); return false;">
+          Descargar Manual de Procedimientos (PDF)
+          <span class="material-symbols-outlined text-sm">open_in_new</span>
+</a>
+</div>
+</div>
+<!-- Panel de Jurisdicción y Mapa de UGELs Huancavelica -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between pb-space-2xs mb-space-xs">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-xl">map</span>
+<h3 class="font-headline-sm text-headline-sm text-primary">Red Territorial Huancavelica</h3>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">7 Sedes</span>
+</div>
+<!-- Ubicación del mapa regional -->
+<div class="w-full h-36 rounded-lg bg-surface-container flex items-center justify-center relative overflow-hidden my-2 shadow-inner" data-location="Plaza de Armas Huancavelica, Peru" style="">
+<!-- Overlay de UGELs -->
+<div class="absolute inset-0 bg-primary/20 backdrop-blur-[1px] flex flex-col items-center justify-center p-3 text-center">
+<span class="material-symbols-outlined text-on-primary text-3xl mb-1">domain</span>
+<span class="font-headline-sm text-headline-sm text-on-primary font-bold">Circuito Regional de Valijas</span>
+<span class="font-body-sm text-body-sm text-inverse-on-surface">Huancavelica - Angaraes - Acobamba - Tayacaja - Churcampa - Castrovirreyna - Huaytará</span>
+</div>
+</div>
+<div class="flex flex-col gap-1.5 pt-space-xs font-body-sm text-body-sm">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span>Próxima salida de Valija Regional:</span>
+<span class="font-label-sm text-label-sm font-bold text-primary">Mañana 08:00 AM</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant">
+<span>Custodio General Responsable:</span>
+<span class="font-label-sm text-label-sm text-on-surface">Lic. Juan Carlos Ramos</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant">
+<span>Mesa de Partes Virtual DREH:</span>
+<span class="font-code text-code text-on-tertiary-container font-semibold">ACTIVA 24/7</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Modal Detalle del Expediente de Traslado (Trazabilidad) -->
+<div class="hidden fixed inset-0 z-50 flex items-center justify-center p-space-md bg-primary-container/60 backdrop-blur-sm" id="modal-dossier">
+<div class="bg-surface-container-lowest w-full max-w-2xl rounded-xl shadow-xl overflow-hidden flex flex-col">
+<div class="p-space-md bg-primary-container text-on-primary flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-2xl">folder_shared</span>
+<div>
+<h3 class="font-headline-sm text-headline-sm" id="modal-exp-title">Expediente de Traslado: EXP-2025-0084</h3>
+<span class="font-body-sm text-body-sm text-on-primary-container">Auditoría completa de custodia y folios</span>
+</div>
+</div>
+<button class="p-1 rounded-lg hover:bg-primary text-on-primary transition-colors" onclick="closeModal('modal-dossier')" type="button">
+<span class="material-symbols-outlined text-xl">close</span>
+</button>
+</div>
+<div class="p-space-lg flex flex-col gap-space-md overflow-y-auto max-h-[716px]">
+<!-- Ficha de Datos del Docente -->
+<div class="p-space-md rounded-lg bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-12 h-12 rounded-full bg-surface-container flex items-center justify-center font-headline-sm text-primary font-bold">
+<span class="material-symbols-outlined text-2xl">person</span>
+</div>
+<div>
+<span class="font-label-md text-label-md text-on-surface font-bold block" id="modal-exp-name">Prof. Juan Carlos Ramos Condori</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant" id="modal-exp-dni">DNI: 42819034</span>
+</div>
+</div>
+<span class="px-3 py-1 rounded-full bg-surface-container text-primary font-label-sm text-label-sm font-bold uppercase" id="modal-exp-status-pill">
+            EN TRÁNSITO
+          </span>
+</div>
+<!-- Trayecto -->
+<div class="grid grid-cols-2 gap-space-sm">
+<div class="p-space-sm rounded-lg bg-surface flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Sede de Origen</span>
+<span class="font-label-md text-label-md text-primary font-semibold" id="modal-exp-orig">UGEL Angaraes</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Archivero: Lic. H. Quispe</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Sede Receptora</span>
+<span class="font-label-md text-label-md text-primary font-semibold" id="modal-exp-dest">UGEL Huancavelica</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Receptor: Escalafón Central</span>
+</div>
+</div>
+<!-- Línea de Tiempo de Trazabilidad -->
+<div class="flex flex-col gap-2">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Trazabilidad en Tiempo Real</span>
+<div class="flex flex-col gap-3 pl-2">
+<div class="flex items-start gap-3 relative">
+<div class="w-3 h-3 rounded-full bg-on-tertiary-container mt-1 shrink-0"></div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm font-bold text-on-surface">15 Ene 2025 - 09:30 AM: Expediente Foliado y Sellado</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Se totalizan 142 folios útiles sin enmiendas. Acta firmada por Especialista UGEL Angaraes.</span>
+</div>
+</div>
+<div class="flex items-start gap-3 relative">
+<div class="w-3 h-3 rounded-full bg-primary mt-1 shrink-0 animate-ping"></div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm font-bold text-primary">15 Ene 2025 - 11:45 AM: Despachado en Valija Regional</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">En custodia de mensajería oficial con Guía N° 891-VAL hacia sede Huancavelica.</span>
+</div>
+</div>
+<div class="flex items-start gap-3 relative opacity-50">
+<div class="w-3 h-3 rounded-full bg-outline mt-1 shrink-0"></div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm font-semibold text-on-surface-variant">Pendiente: Recepción y Apertura en Escalafón UGEL Huancavelica</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Validación física final e ingreso al padrón regional.</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="p-space-md bg-surface-container-low flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Certificación Digital ID: DREH-ESCAL-2025-084</span>
+<div class="flex items-center gap-2">
+<button class="px-4 py-2 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md" onclick="closeModal('modal-dossier')" type="button">
+            Cerrar
+          </button>
+<button class="px-4 py-2 rounded-lg bg-primary-container text-on-primary font-label-md text-label-md flex items-center gap-1.5 shadow-sm" onclick="alert('Imprimiendo Hoja de Ruta Oficial con Código QR institucional.');" type="button">
+<span class="material-symbols-outlined text-base">print</span>
+<span>Hoja de Ruta</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Modal Acta de Entrega y Recepción (PDF Vista Previa) -->
+<div class="hidden fixed inset-0 z-50 flex items-center justify-center p-space-md bg-primary-container/60 backdrop-blur-sm" id="modal-acta">
+<div class="bg-surface-container-lowest w-full max-w-3xl rounded-xl shadow-xl overflow-hidden flex flex-col">
+<div class="p-space-md bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-2xl">picture_as_pdf</span>
+<h3 class="font-headline-sm text-headline-sm text-primary">Acta Oficial de Entrega y Recepción de Legajo</h3>
+</div>
+<button class="p-1 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container" onclick="closeModal('modal-acta')" type="button">
+<span class="material-symbols-outlined text-xl">close</span>
+</button>
+</div>
+<!-- Hoja A4 simulada institucional -->
+<div class="p-space-xl bg-surface-container-lowest overflow-y-auto max-h-[716px] flex flex-col gap-space-md">
+<div class="text-center pb-space-sm">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest block">Gobierno Regional de Huancavelica</span>
+<span class="font-headline-sm text-headline-sm text-primary block font-bold">Dirección Regional de Educación Huancavelica</span>
+<span class="font-label-md text-label-md text-secondary uppercase font-semibold">Área de Escalafón y Legajos - Ley N° 29944</span>
+</div>
+<div class="p-space-md rounded-lg bg-surface text-center">
+<h4 class="font-headline-sm text-headline-sm text-primary font-bold">ACTA DE TRANSFERENCIA Y TRASLADO N° 0042-2025-DREH</h4>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Conforme a la Resolución Viceministerial N° 124-2023-MINEDU</span>
+</div>
+<div class="flex flex-col gap-space-sm font-body-md text-body-md text-on-surface leading-relaxed">
+<p>
+            En la ciudad de Huancavelica, siendo el día <strong>15 de Enero del 2025</strong>, en las instalaciones de la Dirección Regional de Educación de Huancavelica, se procede a dar fe del traslado físico y digital del legajo personal del servidor público:
+          </p>
+<div class="p-space-sm rounded-lg bg-surface grid grid-cols-2 gap-2 font-body-sm text-body-sm">
+<div><strong>Apellidos y Nombres:</strong> Ramos Condori, Juan Carlos</div>
+<div><strong>Documento de Identidad:</strong> DNI N° 42819034</div>
+<div><strong>Cargo y Régimen:</strong> Profesor Por Horas / Ley de Reforma Magisterial</div>
+<div><strong>Acto Resolutivo:</strong> R.D. N° 01482-2024-DREH</div>
+<div><strong>UGEL de Origen:</strong> UGEL Angaraes</div>
+<div><strong>UGEL de Destino:</strong> UGEL Huancavelica</div>
+<div class="col-span-2"><strong>Total Folios Útiles:</strong> 142 folios numerados correlativamente (Tomo I: 102, Tomo II: 40).</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Ambas partes dejan constancia de que las piezas documentales adjuntas cuentan con el sello de compulsa y verificación legal correspondiente a la Directiva de SERVIR y el Manual de Normas de Escalafón del Magisterio.
+          </p>
+</div>
+<!-- Firmas -->
+<div class="grid grid-cols-2 gap-space-xl pt-space-lg text-center font-body-sm text-body-sm">
+<div class="flex flex-col items-center">
+<div class="w-48 h-0.5 bg-on-surface-variant mb-1"></div>
+<span class="font-bold text-on-surface">Lic. Juan Carlos Ramos</span>
+<span class="text-on-surface-variant text-xs">Custodio Responsable DRE Huancavelica</span>
+</div>
+<div class="flex flex-col items-center">
+<div class="w-48 h-0.5 bg-on-surface-variant mb-1"></div>
+<span class="font-bold text-on-surface">Especialista de Escalafón</span>
+<span class="text-on-surface-variant text-xs">UGEL Receptora / Destino</span>
+</div>
+</div>
+</div>
+<div class="p-space-md bg-surface-container-low flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Código Único de Verificación: [ QR-2025-DREH-TRASLADO-891 ]</span>
+<div class="flex items-center gap-2">
+<button class="px-4 py-2 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md" onclick="closeModal('modal-acta')" type="button">
+            Cerrar
+          </button>
+<button class="px-4 py-2 rounded-lg bg-secondary text-on-secondary font-label-md text-label-md flex items-center gap-1.5 shadow-sm" onclick="alert('Descargando Acta Oficial en Formato PDF Firmado Digitalmente...'); closeModal('modal-acta');" type="button">
+<span class="material-symbols-outlined text-base">download</span>
+<span>Descargar PDF</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<script>
+    // Función para alternar visibilidad de paneles (como el formulario)
+    function toggleSection(elementId) {
+      const el = document.getElementById(elementId);
+      if (el) {
+        el.classList.toggle('hidden');
+        if (!el.classList.contains('hidden')) {
+          el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }
+    }
+
+    // Modal helpers
+    function toggleModal(modalId) {
+      const m = document.getElementById(modalId);
+      if (m) m.classList.toggle('hidden');
+    }
+
+    function closeModal(modalId) {
+      const m = document.getElementById(modalId);
+      if (m) m.classList.add('hidden');
+    }
+
+    // Modal de detalle con datos dinámicos
+    function openDossierModal(expId, name, dni, orig, dest, folios, status) {
+      document.getElementById('modal-exp-title').textContent = 'Expediente de Traslado: ' + expId;
+      document.getElementById('modal-exp-name').textContent = name;
+      document.getElementById('modal-exp-dni').textContent = 'DNI: ' + dni;
+      document.getElementById('modal-exp-orig').textContent = orig;
+      document.getElementById('modal-exp-dest').textContent = dest;
+      
+      const pill = document.getElementById('modal-exp-status-pill');
+      pill.textContent = status;
+      if (status === 'OBSERVADO') {
+        pill.className = 'px-3 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed-variant font-label-sm text-label-sm font-bold uppercase';
+      } else if (status === 'APROBADO') {
+        pill.className = 'px-3 py-1 rounded-full bg-surface-container text-on-tertiary-container font-label-sm text-label-sm font-bold uppercase';
+      } else {
+        pill.className = 'px-3 py-1 rounded-full bg-surface-container text-primary font-label-sm text-label-sm font-bold uppercase';
+      }
+
+      toggleModal('modal-dossier');
+    }
+
+    // Filtros de tabla
+    function filterRows(reset = false) {
+      const statusSelect = document.getElementById('filter-status');
+      const ugelSelect = document.getElementById('filter-ugel');
+      
+      if (reset) {
+        statusSelect.value = 'TODOS';
+        ugelSelect.value = 'TODAS';
+      }
+
+      const statusVal = statusSelect.value.toUpperCase();
+      const ugelVal = ugelSelect.value.toUpperCase();
+      const tbody = document.getElementById('tabla-cuerpo');
+      const rows = tbody.getElementsByTagName('tr');
+
+      for (let i = 0; i < rows.length; i++) {
+        const rowText = rows[i].innerText.toUpperCase();
+        let matchStatus = true;
+        let matchUgel = true;
+
+        if (statusVal !== 'TODOS') {
+          matchStatus = rowText.includes(statusVal);
+        }
+
+        if (ugelVal !== 'TODAS') {
+          matchUgel = rowText.includes(ugelVal);
+        }
+
+        if (matchStatus && matchUgel) {
+          rows[i].style.display = '';
+        } else {
+          rows[i].style.display = 'none';
+        }
+      }
+    }
+  </script>
+</div></main></div><details id="vscode-nav"><summary>☰ Navegación</summary><div class="links"><a href="dashboard.html">Inicio</a><a href="servidores.html">Servidores</a><a href="legajo.html">Legajo</a><a href="traslado.html">Traslado</a><a href="auditoria.html">Auditoría</a><a href="ficha.html">Ficha</a><a href="portal-servidor.html">Portal servidor</a><a href="index.html">Salir</a></div></details><script src="app.js"></script></body></html>

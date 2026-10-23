@@ -1,0 +1,16 @@
+IMÁGENES DEL PORTAL DEL SERVIDOR
+
+Puedes colocar en esta carpeta:
+
+- mi-escalafon.png        Imagen de la tarjeta Mi Escalafón
+- mi-boleta.png           Imagen de la tarjeta Mi boleta
+- mi-legajo.png           Imagen de la opción Mi Legajo
+- actualizar-legajo.png   Imagen de Actualizar mi legajo
+- seguimiento-solicitudes.png Imagen de Seguimiento de solicitudes
+- perfil-23298412.jpg     Foto del servidor con ese DNI
+- perfil-40182903.jpg
+- perfil-47209118.jpg
+- perfil-20049581.jpg
+- perfil-19934820.jpg
+
+Si una imagen no existe, el sistema muestra automáticamente un icono provisional.
